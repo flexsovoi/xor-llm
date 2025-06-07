@@ -18,7 +18,7 @@ const Year1997 = () => {
 				</div>
 				<div className="sc-left-[40px] sc-bottom-12 absolute flex">
 					<ImageContainer
-						src={"/images/image-4.png"}
+						src={"/images/image-4.jpg"}
 						className="sc-w-[205px] sc-h-[191px] -rotate-2"
 					/>
 					<div className="sc-w-[270px] sc-right-3 sc-top-12 relative">
