@@ -12,7 +12,7 @@ const DashedBorderBox: React.FC<DashedBorderBoxProps> = ({
 	viewBox,
 }) => {
 	// Разбираем viewBox на составляющие
-	const [x, y, width, height] = viewBox.split(" ").map(Number)
+	const [, , width, height] = viewBox.split(" ").map(Number)
 
 	// Фиксированные параметры
 	const strokeWidth = 2
@@ -21,7 +21,7 @@ const DashedBorderBox: React.FC<DashedBorderBoxProps> = ({
 	const borderRadius = 20
 
 	// Рассчитываем контрольные точки для скругления (0.55 дает более плавный изгиб)
-	const controlOffset = (borderRadius * 0.55).toFixed(2)
+	const controlOffset: number = Number((borderRadius * 0.55).toFixed(2))
 
 	// Формируем путь со скруглением всех углов
 	const pathData = `
