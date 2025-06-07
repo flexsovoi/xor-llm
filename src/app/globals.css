@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin "../abstract/lib/pxToVwPlugin.js";
-
+:root {
+	--scale-factor: 1;
+}
 @theme {
 	--font-bounded: "Bounded", "sans-serif";
 	--font-onest: "Onest", "sans-serif";

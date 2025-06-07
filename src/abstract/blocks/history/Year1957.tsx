@@ -1,53 +1,69 @@
+import DashedBorderBox from "@/abstract/components/DashedBorderBox/DashedBorderBox"
+import ImageContainer from "@/abstract/components/ImageContainer/ImageContainer"
+import InfoBox from "@/abstract/components/InfoBox/InfoBox"
 import SubTitle from "@/abstract/components/SubTitle/SubTitle"
 
 const Year1957 = () => {
 	return (
 		<div>
-			<svg
-				className="sc-w-0.5 sc-h-[33px] sc-ml-[42px] sc-mt-1"
-				viewBox="0 0 2 33"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<path
-					stroke="#C8C8C8"
-					strokeWidth="2"
-					strokeLinecap="round"
-					strokeDasharray="7 7"
-				/>
-			</svg>
 			<div className="sc-gap-[24px] flex">
-				<div className="sc-h-[710px] relative">
-					<svg
-						viewBox="0 0 250 710"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						className="absolute h-full"
-					>
-						<rect
-							x={1}
-							y={1}
-							width={248}
-							height={478}
-							rx={20}
-							stroke="#C8C8C8"
-							strokeWidth={2}
-							strokeLinecap="round"
-							strokeDasharray="12 12"
-						/>
-					</svg>
-					<div className="sc-p-5 sc-w-[248px] relative">
+				<DashedBorderBox viewBox="0 0 250 710">
+					<div className="sc-p-5 sc-w-[250px] sc-h-[710px]">
 						<SubTitle>1957</SubTitle>
-						<small className="font-onest text-[#828282]">
+						<p className="font-onest sc-text-4 text-[#828282]">
 							Люди изобретают первую модель нейрона мозга
-						</small>
+						</p>
+					</div>
+				</DashedBorderBox>
+				<div>
+					<p className="font-onest sc-text-5 sc-mt-5">
+						Фрэнком Розенблаттом был изобретен{" "}
+						<span className="font-bold">перцептрон</span> — простейшая нейронная
+						сеть и первую математическую модель нейрона мозга.
+						Вот как перцептрон выглядел:
+					</p>
+					<div className="relative">
+						<div className="sc-w-[460px] sc-h-[215px] sc-top-[50px] -sc-left-[40px] absolute">
+							<ImageContainer src="/images/image-2.png" />
+							<div className="sc-right-[455px] sc-top-[45px] sc-w-[230px] absolute">
+								<InfoBox arrowOffset="55px">
+									<p className="font-onest sc-text-5 sc-p-[16px] text-[#707070]">
+										На вход поступают несколько значений (числа)
+									</p>
+								</InfoBox>
+							</div>
+							<div className="sc-left-[455px] sc-top-[40px] absolute">
+								<InfoBox arrowOffset="55px" arrowPosition="left">
+									<p className="font-onest sc-text-5 sc-p-[16px] sc-w-[290px] text-[#707070]">
+										Чтобы добавить нелинейности, сумма проходит через простую{" "}
+										<span className="font-bold text-black">
+											активационную функцию:
+										</span>{" "}
+										если она больше некоторого значения, на выходе сети будет 1,
+										иначе 0.
+									</p>
+								</InfoBox>
+							</div>
+							<div className="sc-top-[185px] sc-left-[90px] sc-w-[310px] absolute">
+								<InfoBox arrowOffset="150px" arrowPosition="top">
+									<p className="font-onest sc-text-5 sc-p-[16px] text-[#707070]">
+										Каждое значение умножается на свой вес w
+										и все это суммируется
+									</p>
+								</InfoBox>
+							</div>
+						</div>
+					</div>
+					<div className="sc-gap-[16px] sc-p-4 sc-mt-[415px] sc-right-[50px] relative flex w-full flex-col rounded-[8px] border bg-[#5DFBFB]">
+						<p className="font-onest sc-text-5 font-medium">
+							После изобретения перцептрон подвергся большой критике. Многие
+							считали, что такой подход не будет работать.
+						</p>
+						<p className="font-onest sc-text-5 font-medium">
+							В итоге перцептрон лежит в основе всех нейросетей даже сегодня.
+						</p>
 					</div>
 				</div>
-				<p className="font-onest sc-text-5">
-					Фрэнком Розенблаттом был изобретен перцептрон — простейшая нейронная
-					сеть и первую математическую модель нейрона мозга. Вот как перцептрон
-					выглядел:
-				</p>
 			</div>
 		</div>
 	)

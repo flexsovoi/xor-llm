@@ -1,3 +1,4 @@
+import DashedBorderBox from "@/abstract/components/DashedBorderBox/DashedBorderBox"
 import ImageContainer from "@/abstract/components/ImageContainer/ImageContainer"
 import SubTitle from "@/abstract/components/SubTitle/SubTitle"
 
@@ -18,28 +19,11 @@ const Begin = () => {
 					strokeDasharray="7 7"
 				/>
 			</svg>
-
 			<div className="flex justify-between">
-				{/* <div className="h-478d p-20d rounded-8d relative border border-dashed border-[#C8C8C8]">			 */}
-				<div className="sc-h-[478px] relative">
-					<svg
-						viewBox="0 0 250 480"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						className="absolute h-full"
-					>
-						<rect
-							x={1}
-							y={1}
-							width={248}
-							height={478}
-							rx={20}
-							stroke="#C8C8C8"
-							strokeWidth={2}
-							strokeLinecap="round"
-							strokeDasharray="12 12"
-						/>
-					</svg>
+				<DashedBorderBox
+					viewBox="0 0 250 480"
+					className="sc-h-[480px] sc-w-[250px] relative"
+				>
 					<div className="sc-p-5 relative">
 						<SubTitle>Начало</SubTitle>
 						<ImageContainer
@@ -47,7 +31,8 @@ const Begin = () => {
 							className="sc-w-[305px] sc-h-[305px] sc-mt-[82px] absolute -rotate-1"
 						/>
 					</div>
-				</div>
+				</DashedBorderBox>
+
 				<div className="sc-w-[700px] flex flex-col">
 					<p className="sc-text-5 font-onest">
 						<span className="font-semibold">Всего 100 лет назад </span>
