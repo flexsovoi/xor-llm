@@ -193,8 +193,8 @@ const LineAlgebra = () => {
 						</p>
 					</div>
 				</div>
-				<SubTitle>Зачем это делать именно так?</SubTitle>
 			</div>
+			<SubTitle>Зачем это делать именно так?</SubTitle>
 		</div>
 	)
 }
