@@ -54,7 +54,7 @@ const Year1957 = () => {
 							</div>
 						</div>
 					</div>
-					<div className="sc-gap-[16px] sc-p-4 sc-mt-[415px] sc-right-[50px] relative flex w-full flex-col rounded-[8px] border bg-[#5DFBFB]">
+					<div className="sc-gap-[10px] sc-p-4 sc-mt-[415px] sc-right-[50px] sc-w-[560px] relative flex flex-col rounded-[8px] border bg-[#5DFBFB]">
 						<p className="font-onest sc-text-5 font-medium">
 							После изобретения перцептрон подвергся большой критике. Многие
 							считали, что такой подход не будет работать.

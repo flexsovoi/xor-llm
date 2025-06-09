@@ -21,7 +21,7 @@ const Year1986 = () => {
 					className="sc-w-[537px] sc-h-[260px] sc-left-[40px] relative"
 				/>
 			</DashedBorderBox>
-			<div className="sc-gap-4 sc-mt-5 flex flex-col">
+			<div className="sc-gap-4 sc-mt-5 sc-mt-5 flex flex-col">
 				<p className="font-onest sc-text-5 text-[#525252]">
 					Ещё одно открытие, за которое учёные получили Нобелевскую премию —{" "}
 					<span className="font-bold text-black">

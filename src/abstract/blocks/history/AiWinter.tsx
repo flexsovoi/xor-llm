@@ -1,10 +1,8 @@
+import { BluePoint } from "@/abstract/components/BluePoint/BluePoint"
 import InfoBox from "@/abstract/components/InfoBox/InfoBox"
 import VerticalDashedLine from "@/abstract/components/VerticalDashedLine/VerticalDashedLine"
 
 const AiWinter = () => {
-	const Point = () => {
-		return <div className="sc-w-3 sc-h-3 rounded-full border bg-[#5DFBFB]" />
-	}
 	return (
 		<div className="sc-gap-4 sc-mt-5 flex">
 			<VerticalDashedLine
@@ -26,19 +24,19 @@ const AiWinter = () => {
 			<div>
 				<p className="font-onest sc-text-5 font-medium">Причины:</p>
 				<div className="sc-gap-2 flex items-center">
-					<Point />
+					<BluePoint />
 					<p className="font-onest sc-text-5 font-medium">
 						Завышенные ожидания
 					</p>
 				</div>
 				<div className="sc-gap-2 flex items-center">
-					<Point />
+					<BluePoint />
 					<p className="font-onest sc-text-5 font-medium">
 						Критика потенциала нейросетей
 					</p>
 				</div>
 				<div className="sc-gap-2 flex items-center">
-					<Point />
+					<BluePoint />
 					<p className="font-onest sc-text-5 font-medium">
 						Отсутствие результатов
 					</p>

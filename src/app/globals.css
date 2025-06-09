@@ -1,11 +1,13 @@
 @import "tailwindcss";
 @plugin "../abstract/lib/pxToVwPlugin.js";
+
 :root {
 	--scale-factor: 1;
 }
 @theme {
 	--font-bounded: "Bounded", "sans-serif";
 	--font-onest: "Onest", "sans-serif";
+	--color-myblue: #5dfbfb;
 }
 @font-face {
 	font-family: "Bounded";
@@ -14,7 +16,4 @@
 @font-face {
 	font-family: "Onest";
 	src: url("/fonts/onest/Onest-VariableFont_wght.ttf");
-}
-.title {
-	font-size: calc(48px * var(--scale-factor));
 }

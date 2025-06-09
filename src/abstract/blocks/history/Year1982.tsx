@@ -15,7 +15,7 @@ const Year1982 = () => {
 					</p>
 				</div>
 			</DashedBorderBox>
-			<div className="sc-gap-4 flex flex-col">
+			<div className="sc-gap-4 sc-mt-4 flex flex-col">
 				<p className="font-onest sc-text-5 text-[#525252]">
 					В это время были изобретены первые{" "}
 					<span className="font-bold text-black">
