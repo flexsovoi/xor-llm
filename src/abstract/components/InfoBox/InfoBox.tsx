@@ -26,7 +26,7 @@ const InfoBox: React.FC<InfoBoxProps> = ({
 			case "top":
 				return "rotate-270"
 			case "bottom":
-				return "-rotate-90"
+				return "rotate-90"
 			default:
 				return ""
 		}

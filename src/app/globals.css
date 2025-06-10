@@ -17,3 +17,6 @@
 	font-family: "Onest";
 	src: url("/fonts/onest/Onest-VariableFont_wght.ttf");
 }
+strong {
+	color: #151515;
+}

@@ -195,6 +195,187 @@ const LineAlgebra = () => {
 				</div>
 			</div>
 			<SubTitle>Зачем это делать именно так?</SubTitle>
+			<div className="flex">
+				<div className="sc-gap-[18px] flex flex-col">
+					<p>
+						Вспомним историю LLM и то, как выглядит <strong>перцептрон</strong>
+					</p>
+					<p>
+						Посмотрим на него внимательнее. У нас есть вектор входных значений{" "}
+						<strong>X</strong>
+						и вектор весов <strong>W</strong>. Каждое значение умножается
+						на свой вес, а затем все складывается. Это ведь и есть скалярное
+						произведение!
+					</p>
+					<div className="sc-w-[268px] sc-h-[72px] self-end">
+						<InfoBox arrowPosition="right" arrowOffset="31px">
+							<p className="sc-p-4 sc-text-4 bg-myblue rounded-md border font-semibold">
+								На вход поступают несколько значений (числа)
+							</p>
+						</InfoBox>
+					</div>
+				</div>
+				<div className="sc-top-[115px] relative">
+					<svg
+						className="sc-w-[76px] sc-h-[199px]"
+						width={76}
+						height={199}
+						viewBox="0 0 76 199"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M0 198H17.0972C23.7246 198 29.0971 192.627 29.0971 186V13C29.0971 6.37258 34.4697 1 41.0971 1H76"
+							stroke="black"
+							strokeWidth={2}
+						/>
+					</svg>
+				</div>
+				<div className="sc-gap-5 flex flex-col items-center">
+					<ImageContainer
+						fit="cover"
+						src={"/images/image-2.png"}
+						className="sc-w-[524px] sc-h-[242px] relative"
+					/>
+					<div className="sc-w-[274px] sc-h-[100px]">
+						<InfoBox arrowPosition="top" arrowOffset="132px">
+							<p className="sc-p-4 sc-text-4 font-semibold">
+								Каждое значение умножается на свой вес W и все это суммируется
+							</p>
+						</InfoBox>
+					</div>
+				</div>
+			</div>
+			<div className="sc-gap-3 flex flex-col">
+				<p>
+					Конечно, это упрощенный пример. В LLM все немного сложнее, чем на
+					картинке сверху. И тем не менее, общий принцип остается схожим: просто
+					слоев, значений и весов намного больше, поэтому{" "}
+					<strong>перемножать приходится не векторы, а матрицы.</strong>
+				</p>
+				<p className="sc-p-4 sc-text-4 bg-myblue rounded-md border font-semibold">
+					Перемножить две матрицы – это скалярно перемножить каждую строку
+					первой на каждый столбец второй
+				</p>
+			</div>
+			<div className="sc-text-4 sc-gap-3 sc-mt-7 flex flex-col items-center font-semibold">
+				<p className="sc-p-4 sc-text-4 bg-myblue w-8/10 rounded-md border">
+					Помните, что перемножать можно только векторы одной и той же длины,
+					так что количество столбцов первой матрицы должно быть равно
+					количеству строк второй.
+				</p>
+				<div className="sc-bottom-5 relative flex flex-col">
+					<div className="sc-mb-3 sc-w-[442px] self-end">
+						<InfoBox arrowPosition="bottom" arrowOffset="14px">
+							<p className="sc-p-4">
+								Это элемент матрицы с индексом 1,1, так что его мы получим,
+								когда скалярно перемножим первую строку матрицы A на первый
+								столбец матрицы B
+							</p>
+						</InfoBox>
+					</div>
+					<ImageContainer
+						fit="cover"
+						src={"/images/image-18.png"}
+						className="sc-w-[940px] sc-h-[210px] relative"
+					/>
+					<div className="sc-bottom-2 sc-w-[442px] relative self-end">
+						<InfoBox arrowPosition="top" arrowOffset="282px">
+							<p className="sc-p-4">
+								Это элемент с индексом 3,2, так что его мы получим, когда
+								скалярно перемножим третью строку матрицы A на второй столбец
+								матрицы B
+							</p>
+						</InfoBox>
+					</div>
+				</div>
+				<p className="sc-p-4 sc-w-[554px] sc-text-4 bg-myblue rounded-md border font-semibold">
+					Если матрица A имеет размер m×k, а матрица B имеет размер k×n, то
+					итоговая матрица будет иметь размер m×n.
+				</p>
+			</div>
+			<div className="sc-gap-3 flex flex-col">
+				<p className="text-[#464646]">
+					Умножение тензоров размерностей 3D, 4D и так далее происходит по той
+					же логике.
+				</p>
+				<div className="sc-text-4 sc-gap-2 sc-p-4 flex flex-col rounded-lg border">
+					<p className="font-semibold">Например:</p>
+					<p className="sc-gap-2 font-onest flex items-baseline font-medium">
+						<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+						Нужно перемножить тензор размерности 2×3×4 на матрицу размерности
+						4×2
+					</p>
+					<p className="sc-gap-2 font-onest flex items-baseline font-medium">
+						<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+						Для этого надо перемножить каждую “подматрицу” тензора T на матрицу
+						W.
+					</p>
+					<p className="sc-gap-2 font-onest flex items-baseline font-medium">
+						<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+						Получится две матрицы размерности 3 × 2, то есть итоговый тензор
+						будет иметь размерность 2 × 3 × 2.
+					</p>
+				</div>
+			</div>
+			<div className="sc-gap-6 flex items-center">
+				<div className="w-1/2">
+					<ImageContainer
+						fit="contain"
+						src={"/images/image-19.png"}
+						className="sc-h-[250px] sc-p-4 relative"
+					/>
+				</div>
+				<div className="w-1/2">
+					<InfoBox arrowOffset="80px" arrowPosition="left">
+						<div className="sc-gap-2 sc-p-4 sx-text-5 flex flex-col text-[#464646]">
+							<p>
+								На практике это могут быть 2 предложения, которые поступают
+								в сеть.
+							</p>
+							<p>
+								В каждом предложении 3 слова, каждое слово представлено вектором
+								из 4 чисел.
+							</p>
+						</div>
+					</InfoBox>
+				</div>
+			</div>
+			<div className="sc-gap-6 flex items-center justify-end">
+				<div className="w-1/2">
+					<InfoBox arrowOffset="60px" arrowPosition="right">
+						<div className="sc-p-4 sx-text-5 flex flex-col text-[#464646]">
+							<p>
+								А это могут быть наши веса, на которые необходимо перемножить
+								входные значения (наши два предложения).
+							</p>
+						</div>
+					</InfoBox>
+				</div>
+				<div className="w-1/2">
+					<ImageContainer
+						fit="contain"
+						src={"/images/image-20.png"}
+						className="sc-h-[258px] sc-p-4 relative"
+					/>
+				</div>
+			</div>
+			<div className="sc-gap-4 sc-p-4 sc-text-4 bg-myblue m-auto flex w-8/10 flex-col rounded-lg border font-semibold">
+				<p>
+					Именно умножение тензоров лежит в основе каждого слоя в больших
+					языковых моделях.
+				</p>
+				<p>
+					Когда вы слышите, что какая‑то модель имеет 400 миллиардов
+					параметров — это значит, что внутри неё огромное количество матриц,
+					которые непрерывно перемножаются друг на друга, чтобы в итоге
+					генерировать текст.
+				</p>{" "}
+				<p>
+					И кстати, GPU нам тоже нужно именно для того, чтобы оптимизировать
+					матричные вычисления.
+				</p>
+			</div>
 		</div>
 	)
 }
