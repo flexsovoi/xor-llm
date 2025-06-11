@@ -2,10 +2,13 @@ import Script from "next/script"
 import AiMathBegin from "./blocks/AiMath/AiMathBegin"
 import LineAlgebra from "./blocks/AiMath/LineAlgebra"
 import MathAnalytic from "./blocks/AiMath/MathAnalytic"
+import FineTuning from "./blocks/FineTuning"
 import HistoryBlock from "./blocks/history/HistoryBlock"
+import Learning from "./blocks/Learning"
 import MechanismAttention from "./blocks/MechanismAttention/MechanismAttention"
+import PreTraining from "./blocks/pre-training/PreTraining"
 import Transformers from "./blocks/transformers/Transformers"
-import Title from "./components/Title/Title"
+import Title from "./components/Text/Title"
 import { scaleFunction } from "./lib/scale-function"
 
 const LlmAbstract = () => {
@@ -33,6 +36,12 @@ const LlmAbstract = () => {
 				<MechanismAttention />
 				<Title>Трансформеры</Title>
 				<Transformers />
+				<Title>Предобучение</Title>
+				<PreTraining />
+				<Title>Файн-тюнинг</Title>
+				<FineTuning />
+				<Title>Обучение с подкреплением и ризонинг</Title>
+				<Learning />
 			</div>
 		</>
 	)

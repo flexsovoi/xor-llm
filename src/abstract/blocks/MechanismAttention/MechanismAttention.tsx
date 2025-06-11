@@ -59,8 +59,8 @@ const MechanismAttention = () => {
 					xmlns="http://www.w3.org/2000/svg"
 				>
 					<path
-						fill-rule="evenodd"
-						clip-rule="evenodd"
+						fillRule="evenodd"
+						clipRule="evenodd"
 						d="M9.73154e-07 12.5789C3.81828 12.5789 7 15.8525 7 20L9 20C9 15.8525 12.1817 12.5789 16 12.5789L16 10.5789C13.1544 10.5789 10.642 11.951 9 14.0788L9 -9.17939e-07L7 -1.18021e-06L7 14.0788C5.35799 11.951 2.84565 10.5789 1.23542e-06 10.5789L9.73154e-07 12.5789Z"
 						fill="#151515"
 					/>
@@ -82,20 +82,20 @@ const MechanismAttention = () => {
 					xmlns="http://www.w3.org/2000/svg"
 				>
 					<path
-						fill-rule="evenodd"
-						clip-rule="evenodd"
+						fillRule="evenodd"
+						clipRule="evenodd"
 						d="M149 44.5789C152.818 44.5789 156 47.8525 156 52L158 52C158 47.8525 161.182 44.5789 165 44.5789L165 42.5789C162.154 42.5789 159.642 43.951 158 46.0788L158 32L156 32L156 46.0788C154.358 43.951 151.846 42.5789 149 42.5789L149 44.5789Z"
 						fill="#151515"
 					/>
 					<path
 						d="M301 0L301 13.5C301 16.8137 298.314 19.5 295 19.5L163 19.5C159.686 19.5 157 22.1863 157 25.5L157 32"
 						stroke="#151515"
-						stroke-width="2"
+						strokeWidth="2"
 					/>
 					<path
 						d="M0.999997 0L0.999998 13.5C0.999999 16.8137 3.68629 19.5 7 19.5L151 19.5C154.314 19.5 157 22.1863 157 25.5L157 32"
 						stroke="#151515"
-						stroke-width="2"
+						strokeWidth="2"
 					/>
 				</svg>
 				<p className="sc-p-3 m-auto w-1/2 rounded-[48px] bg-[#151515] text-center text-white">
@@ -108,8 +108,8 @@ const MechanismAttention = () => {
 					xmlns="http://www.w3.org/2000/svg"
 				>
 					<path
-						fill-rule="evenodd"
-						clip-rule="evenodd"
+						fillRule="evenodd"
+						clipRule="evenodd"
 						d="M9.73154e-07 12.5789C3.81828 12.5789 7 15.8525 7 20L9 20C9 15.8525 12.1817 12.5789 16 12.5789L16 10.5789C13.1544 10.5789 10.642 11.951 9 14.0788L9 -9.17939e-07L7 -1.18021e-06L7 14.0788C5.35799 11.951 2.84565 10.5789 1.23542e-06 10.5789L9.73154e-07 12.5789Z"
 						fill="#151515"
 					/>

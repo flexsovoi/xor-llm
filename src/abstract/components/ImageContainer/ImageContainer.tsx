@@ -14,6 +14,7 @@ const ImageContainer = ({ src, className, fit = "contain" }: Props) => {
 				fill
 				objectFit={fit}
 				className="sc-border relative -z-1 overflow-hidden rounded-[8px] border-[#151515] bg-white shadow-[2px_2px_0px_0px_#151515]"
+				loading="lazy"
 			/>
 		</div>
 	)

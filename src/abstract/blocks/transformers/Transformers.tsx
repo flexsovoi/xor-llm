@@ -367,6 +367,112 @@ const Transformers = () => {
 					те данные, в которых он (как считает модель) разбирается лучше других.
 				</p>
 			</div>
+			<div className="flex flex-col items-center">
+				<div className="sc-gap-[45px] flex">
+					<div className="sc-w-[285px] sc-top-8 relative">
+						<InfoBox arrowPosition="bottom" arrowOffset="160px">
+							<p className="sc-p-4">
+								В этой части все остается как есть, обычный трансформер.
+								Внимание общее для всех токенов.
+							</p>
+						</InfoBox>
+					</div>
+					<div className="sc-w-[285px] sc-top-8 relative">
+						<InfoBox arrowPosition="bottom" arrowOffset="160px">
+							<p className="sc-p-4">
+								В этой части все остается как есть, обычный трансформер.
+								Внимание общее для всех токенов.
+							</p>
+						</InfoBox>
+					</div>
+					<div className="sc-w-[285px] sc-top-[55px] relative">
+						<InfoBox arrowPosition="bottom" arrowOffset="155px">
+							<p className="sc-p-4">
+								Вместо одной полносвязной сети здесь появляется несколько.
+								Каждая – эксперт, который обрабатывает доверенные ему токены.
+							</p>
+						</InfoBox>
+					</div>
+				</div>
+				<div>
+					<ImageContainer
+						src={"/images/image-51.png"}
+						className="sc-w-[874px] sc-h-[285px] relative"
+					/>
+				</div>
+				<div className="sc-mt-3 self-end">
+					<InfoBox arrowPosition="top" arrowOffset="170px">
+						<p className="sc-p-4">В итоге суммируем ответы всех экспертов.</p>
+					</InfoBox>
+				</div>
+			</div>
+			<div className="sc-gap-5 flex">
+				<div className="sc-gap-4 flex flex-col">
+					<div>
+						<strong>Decoder-only</strong>
+						<p>
+							В таких архитектурах вся модель — это декодер. Энкодер
+							отбрасывается вообще. Такие модели проще и быстрее обучаются,
+							поэтому стали популярны.{" "}
+							<strong>
+								Самый известный пример decoder-only модели — это GPT.
+							</strong>
+						</p>
+					</div>
+					<p>
+						<strong>
+							Вот так выглядит полная архитектура. Как видите, все остаётся
+							как было, только мы избавляемся от тяжеловесного энкодера.
+						</strong>
+						.
+					</p>
+				</div>
+				<div>
+					<ImageContainer
+						src={"/images/image-52.png"}
+						className="sc-w-[532px] sc-h-[306px] relative"
+					/>
+				</div>
+			</div>
+			<div className="sc-gap-5 flex">
+				<div>
+					<ImageContainer
+						src={"/images/image-52.png"}
+						className="sc-w-[532px] sc-h-[306px] relative"
+					/>
+				</div>
+				<div className="sc-gap-4 flex flex-col">
+					<div>
+						<strong>Мультимодальный трансформер</strong>
+						<p>
+							Сама архитектура здесь не меняется. Просто добавляются другие
+							модальности (картинки, видео, аудио), которые нужно обрабатывать
+							отдельно
+						</p>
+					</div>
+					<p>
+						Из-за этого нам приходится множить энкодеры: каждый из энкодеров
+						отвечает за свою модальность и переводит разные типы данных
+						в эмбеддинги.
+					</p>
+				</div>
+			</div>
+			<div>
+				<ol className="flex list-decimal flex-wrap font-medium">
+					<div className="sc-pl-8 sc-pr-3 sc-py-3 sc-w-[363px]">
+						<li>Склеиваем и подаём в LLM</li>
+					</div>
+					<div className="sc-pl-8 sc-pr-3 sc-py-3 sc-w-[411px]">
+						<li>
+							Отражаем их в одно пространство (например, чтобы эмбеддинг
+							картинки кота был похож на слово «кот»).
+						</li>
+					</div>{" "}
+					<div className="sc-pl-8 sc-pr-3 sc-py-3 sc-w-[363px] sc-bottom-20 relative">
+						<li>Энкодим разные виды входных данных в эмбеддинги.</li>
+					</div>
+				</ol>
+			</div>
 		</div>
 	)
 }
