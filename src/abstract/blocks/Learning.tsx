@@ -86,7 +86,7 @@ const Learning = () => {
 					<div className="relative">
 						<div className="relative">
 							<svg
-								className="sc-w-[221px] sc-h-[35px] sc-top-[100px] -sc-left-[229px] absolute z-10000"
+								className="sc-w-[221px] sc-h-[35px] sc-top-[100px] -sc-left-[229px] absolute z-5"
 								viewBox="0 0 221 35"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"

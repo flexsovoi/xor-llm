@@ -48,7 +48,7 @@ const InfoBox: React.FC<InfoBoxProps> = ({
 	}
 
 	return (
-		<div className="relative z-100 w-fit rounded-lg border border-[#D8D8D8] bg-white">
+		<div className="relative z-10 w-fit rounded-lg border border-[#D8D8D8] bg-white">
 			<div
 				className={`absolute ${getArrowPositionClass()} sc-w-[6px] sc-h-[10px]`}
 				style={offsetStyle}
