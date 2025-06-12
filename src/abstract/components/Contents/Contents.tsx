@@ -30,9 +30,12 @@ export default function TableOfContents() {
 
 	const scrollToSection = (id: string) => {
 		const el = document.getElementById(id)
+		const abstractEl = document.getElementById("abstract")
+		if (!abstractEl || !el) return
 		if (el) {
-			const y = el.getBoundingClientRect().top + window.pageYOffset - 350
-
+			const offset = abstractEl.getBoundingClientRect().width < 1024 ? 350 : 0
+			const y = el.getBoundingClientRect().top + window.pageYOffset - offset
+			console.log(offset)
 			window.scrollTo({ top: y, behavior: "smooth" })
 			setActiveId(id)
 			setIsOpen(false)
@@ -43,7 +46,7 @@ export default function TableOfContents() {
 
 	return (
 		<aside
-			className={`sticky top-0 z-11 h-fit w-full border border-[#D3D3D3] bg-white p-4 text-sm lg:w-[245px]`}
+			className={`sticky top-0 z-11 h-fit w-full border border-[#D3D3D3] bg-white p-4 text-sm lg:top-6 lg:mt-6 lg:ml-6 lg:w-[245px]`}
 		>
 			{/* Header with toggle on mobile */}
 			<div
