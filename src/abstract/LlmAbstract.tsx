@@ -24,21 +24,13 @@ const LlmAbstract = () => {
 					id="abstract"
 				>
 					<HistoryBlock />
-
 					<AiMathBegin />
-
 					<LineAlgebra />
-
 					<MathAnalytic />
-
 					<MechanismAttention />
-
 					<Transformers />
-
 					<PreTraining />
-
 					<FineTuning />
-
 					<Learning />
 				</div>
 			</div>
