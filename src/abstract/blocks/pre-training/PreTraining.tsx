@@ -1,9 +1,13 @@
+import BlackPoint from "@/abstract/components/BlackPoint"
 import ImageContainer from "@/abstract/components/ImageContainer/ImageContainer"
 import { NumberPoint } from "@/abstract/components/NumberPoint/NumberPoint"
+import Title from "@/abstract/components/Text/Title"
 
 const PreTraining = () => {
 	return (
-		<div className="sc-text-5 sc-gap-6 sc-mt-5 flex flex-col text-[#464646]">
+		<div className="sc-text-5 sc-gap-6 flex flex-col text-[#464646]">
+			<Title id="pretraining">Предобучение</Title>
+
 			<div className="sc-gap-5 flex">
 				<div>
 					<ImageContainer
@@ -426,7 +430,7 @@ const PreTraining = () => {
 
 						<div className="sc-text-4 sc-gap-3 flex flex-col text-[#151515]">
 							<p className="sc-gap-2 flex items-baseline font-medium">
-								<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+								<BlackPoint />
 								Большие модели быстро начнут переобучаться.
 							</p>
 							<div className="sc-gap-2 flex items-baseline font-medium">
@@ -437,7 +441,7 @@ const PreTraining = () => {
 								</p>
 							</div>
 							<p className="sc-gap-2 flex items-baseline font-medium">
-								<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+								<BlackPoint />
 								позволили распараллеливать обучение (работают быстрее
 								и эффективнее)
 							</p>
@@ -462,15 +466,15 @@ const PreTraining = () => {
 				</p>
 				<div className="sc-text-4 sc-gap-3 flex flex-col text-[#151515]">
 					<p className="sc-gap-2 flex items-baseline font-medium">
-						<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+						<BlackPoint />
 						Количества параметров (мощность модели)
 					</p>
 					<div className="sc-gap-2 flex items-baseline font-medium">
-						<div className="sc-w-3 sc-h-3 sc-border-4 rounded-full" />
+						<BlackPoint />
 						<p>Количества данных (объём обучающих текстов)</p>
 					</div>
 					<p className="sc-gap-2 flex items-baseline font-medium">
-						<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+						<BlackPoint />
 						Вычислительных ресурсов (GPU/TPU часы)
 					</p>
 				</div>
@@ -478,7 +482,7 @@ const PreTraining = () => {
 			<p>
 				То есть оказалось, что, увеличивая данные и параметры модели, можно
 				практически бесконечно улучшать качество, причём эти улучшения хорошо
-				описываются простыми математическими закономерностями. Это называется
+				описываются простыми математическими закономерностями. Это называется{" "}
 				<strong>Scaling Laws.</strong>
 			</p>
 			<div>

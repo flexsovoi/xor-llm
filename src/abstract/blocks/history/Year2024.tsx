@@ -48,12 +48,12 @@ const Year2024 = () => {
 					/>
 				</svg>
 				<div className="sc-gap-3 flex justify-center">
-					<div className="flex w-1/2 justify-end">
+					<div className="flex w-2/5 justify-end">
 						<p className="sc-p-4 sc-text-5 w-3/4 rounded-xl border font-medium">
 							Роста количества обучающих данных и параметров
 						</p>
 					</div>
-					<div className="w-2/3">
+					<div className="w-3/5">
 						<p className="sc-p-4 sc-text-5 w-4/5 rounded-xl border font-medium">
 							Длительности рассуждений LLM во время инференса (то есть
 							непосредственно работы)

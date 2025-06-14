@@ -1,13 +1,19 @@
 @import "tailwindcss";
 @plugin "../abstract/lib/pxToVwPlugin.js";
-
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
 :root {
 	--scale-factor: 1;
 }
 @theme {
 	--font-bounded: "Bounded", "sans-serif";
 	--font-onest: "Onest", "sans-serif";
-	--color-myblue: #5dfbfb;
+	--font-firacode: "Fira Code", monospace;
+	--color-codeOrange: #ffab70;
+	--color-codeBlue: #79b8ff;
+	--color-codeRed: #f97583;
+	--color-codeWhite: #e1e4e8;
+	--color-codeGray: #7d8590;
+	--color-codeBg: #0d1117;
 }
 @font-face {
 	font-family: "Bounded";

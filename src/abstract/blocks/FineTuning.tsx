@@ -1,11 +1,13 @@
-import Image from "next/image"
 import ImageContainer from "../components/ImageContainer/ImageContainer"
 import InfoBox from "../components/InfoBox/InfoBox"
 import { NumberPoint } from "../components/NumberPoint/NumberPoint"
+import Title from "../components/Text/Title"
 
 const FineTuning = () => {
 	return (
-		<div className="sc-text-5 sc-gap-6 sc-mt-5 flex flex-col text-[#464646]">
+		<div className="sc-text-5 sc-gap-6 flex flex-col text-[#464646]">
+			<Title id="finetuning">Файн-тюнинг</Title>
+
 			<div className="sc-gap-6 flex">
 				<div>
 					<ImageContainer
@@ -295,10 +297,53 @@ const FineTuning = () => {
 					подготавливает модель к дообучению:
 				</p>
 				<div className="relative">
-					<div className="sc-h-[251px] relative w-full overflow-hidden rounded-lg">
-						<Image src={"/images/image-63.png"} alt={""} fill className="" />
+					<div className="sc-p-[10px] font-firacode sc-gap-5 sc-text-[14px] bg-codeBg flex w-full overflow-hidden rounded-lg">
+						{/* Нумерация строк */}
+						<div className="text-codeGray w-fit pr-4 text-right font-[450]">
+							{Array.from({ length: 12 }, (_, i) => (
+								<p key={i}>{i + 1}</p>
+							))}
+						</div>
+
+						{/* Код */}
+						<div className="text-codeWhite whitespace-pre">
+							<p>
+								<span className="text-codeRed">from</span> transformers{" "}
+								<span className="text-codeRed">import</span> AutoTokenizer,
+								AutoModelForCausalLM, BitsAndBytesConfig
+							</p>
+							<br />
+							<p>
+								bnb_config = BitsAndBytesConfig(
+								<span className="text-codeOrange">load_in_4bit=True</span>,
+							</p>
+							<p className="sc-pl-8">bnb_4bit_use_double_quant=True,</p>
+							<p className="sc-pl-8">bnb_4bit_compute_dtype=torch.bfloat16)</p>
+							<br />
+							<p>model = AutoModelForCausalLM.from_pretrained(</p>
+							<p className="sc-pl-8">
+								<span className="text-codeBlue">
+									&quot;mistralai/Mistral-7B-v0.1&quot;
+								</span>
+								,
+							</p>
+							<p className="sc-pl-8">quantization_config=bnb_config,</p>
+							<p className="sc-pl-8">
+								device_map=
+								<span className="text-codeBlue">&quot;auto&quot;</span>)
+							</p>
+							<p></p>
+							<p>
+								tokenizer = AutoTokenizer.from_pretrained(
+								<span className="text-codeBlue">
+									&quot;mistralai/Mistral-7B-v0.1&quot;
+								</span>
+								)
+							</p>
+							<p>tokenizer.pad_token = tokenizer.eos_token</p>
+						</div>
 					</div>
-					<div className="sc-gap-1 sc-top-10 sc-right-9 absolute flex flex-col items-end">
+					<div className="sc-gap-2 sc-top-10 sc-right-9 absolute flex flex-col items-end">
 						<p className="sc-p-2 sc-w-[337px] sc-text-4 sc-mr-[60px] border bg-white">
 							# Чтобы сэкономить VRAM, модель будем грузить в 4-bit формате
 						</p>
@@ -319,8 +364,47 @@ const FineTuning = () => {
 				</div>
 				<p>Их нужно загрузить и предобработать:</p>
 				<div className="relative">
-					<div className="sc-h-[197px] relative w-full overflow-hidden rounded-lg">
-						<Image src={"/images/image-64.png"} alt={""} fill />
+					<div className="w-full overflow-hidden rounded-lg">
+						<div className="sc-p-[10px] font-firacode sc-gap-5 sc-text-[14px] bg-codeBg flex w-full overflow-hidden rounded-lg">
+							<div className="text-codeGray w-fit pr-4 text-right font-[450]">
+								{Array.from({ length: 10 }, (_, i) => (
+									<p key={i}>{i + 1}</p>
+								))}
+							</div>
+							<div className="text-codeWhite whitespace-pre">
+								<p>
+									<span className="text-codeRed">from</span> datasets{" "}
+									<span className="text-codeRed">import</span> load_dataset
+								</p>
+								<br />
+								<p>
+									dataset = load_dataset(
+									<span className="text-codeBlue">&quot;json&quot;</span>,
+									data_files=
+									<span className="text-codeBlue">&quot;train.json&quot;</span>,
+									split=
+									<span className="text-codeBlue">&quot;train&quot;</span>)
+								</p>
+								<br />
+								<p>
+									<span className="text-codeRed">def</span> format(example):
+								</p>
+								<p className="sc-pl-8">
+									<span className="text-codeRed">return</span> &#123;
+								</p>
+								<p className="sc-pl-12">
+									<span className="text-codeBlue">&quot;text&quot;</span>: f
+									<span className="text-codeBlue">
+										&quot;&lt;s&gt;[INST]
+										&#123;example[&apos;instruction&apos;]&#125; [/INST]
+										&#123;example[&apos;output&apos;]&#125;&lt;/s&gt;&quot;
+									</span>
+								</p>
+								<p className="sc-pl-8">&#125;</p>
+								<br />
+								<p>dataset = dataset.map(format)</p>
+							</div>
+						</div>
 					</div>
 					<div className="sc-gap-1 -sc-top-10 sc-right-9 absolute flex flex-col items-end">
 						<p className="sc-p-2 sc-w-[435px] sc-text-4 sc-mr-[60px] border bg-white">
@@ -344,8 +428,46 @@ const FineTuning = () => {
 					замораживаем. Вот скрипт, который настраивает такой адаптер:
 				</p>
 				<div className="relative">
-					<div className="sc-h-[248px] relative w-full overflow-hidden rounded-lg">
-						<Image src={"/images/image-65.png"} alt={""} fill />
+					<div className="w-full overflow-hidden rounded-lg">
+						<div className="sc-p-[10px] font-firacode sc-gap-5 sc-text-[14px] bg-codeBg flex w-full overflow-hidden rounded-lg">
+							<div className="text-codeGray w-fit pr-4 text-right font-[450]">
+								{Array.from({ length: 12 }, (_, i) => (
+									<p key={i}>{i + 1}</p>
+								))}
+							</div>
+							<div className="text-codeWhite whitespace-pre">
+								<p>
+									<span className="text-codeRed">from</span> peft{" "}
+									<span className="text-codeRed">import</span> LoraConfig,
+									get_peft_model, TaskType
+								</p>
+								<br />
+								<p>
+									lora_config = LoraConfig(r=
+									<span className="text-codeOrange">64</span>,
+								</p>
+								<p className="sc-pl-8">
+									lora_alpha=<span className="text-codeOrange">16</span>,
+								</p>
+								<p className="sc-pl-8">
+									target_modules=[
+									<span className="text-codeBlue">
+										&quot;q_proj&quot;
+									</span>,{" "}
+									<span className="text-codeBlue">&quot;v_proj&quot;</span>],
+								</p>
+								<p className="sc-pl-8">
+									lora_dropout=<span className="text-codeOrange">0.05</span>,
+								</p>
+								<p className="sc-pl-8">
+									bias=<span className="text-codeBlue">&quot;none&quot;</span>,
+								</p>
+								<p className="sc-pl-8">task_type=TaskType.CAUSAL_LM)</p>
+								<br />
+								<p>model = get_peft_model(model, lora_config)</p>
+								<p>model.print_trainable_parameters()</p>
+							</div>
+						</div>
 					</div>
 					<div className="sc-gap-1 -sc-top-7 sc-right-9 absolute flex w-full flex-col items-end">
 						<p className="sc-p-2 sc-w-[372px] sc-text-4 border bg-white">
@@ -370,8 +492,75 @@ const FineTuning = () => {
 					настало время все объединить
 				</p>
 				<div className="relative">
-					<div className="sc-h-[488px] relative w-full overflow-hidden rounded-lg">
-						<Image src={"/images/image-66.png"} alt={""} fill />
+					<div className="w-full overflow-hidden rounded-lg">
+						<div className="sc-p-[10px] font-firacode sc-gap-5 sc-text-[14px] bg-codeBg flex w-full overflow-hidden rounded-lg">
+							<div className="text-codeGray w-fit pr-4 text-right font-[450]">
+								{Array.from({ length: 24 }, (_, i) => (
+									<p key={i}>{i + 1}</p>
+								))}
+							</div>
+							<div className="text-codeWhite whitespace-pre">
+								<p>
+									<span className="text-codeRed">from</span> transformers{" "}
+									<span className="text-codeRed">import</span> TrainingArguments
+								</p>
+								<br />
+								<p>training_args = TrainingArguments(</p>
+								<p className="sc-pl-8">
+									output_dir=
+									<span className="text-codeBlue">
+										&quot;./mistral_lora&quot;
+									</span>
+									,
+								</p>
+								<p className="sc-pl-8">
+									per_device_train_batch_size=
+									<span className="text-codeOrange">2</span>,
+								</p>
+								<p className="sc-pl-8">
+									gradient_accumulation_steps=
+									<span className="text-codeOrange">8</span>,
+								</p>
+								<p className="sc-pl-8">
+									logging_steps=<span className="text-codeOrange">10</span>,
+								</p>
+								<p className="sc-pl-8">
+									save_steps=<span className="text-codeOrange">100</span>,
+								</p>
+								<p className="sc-pl-8">
+									num_train_epochs=<span className="text-codeOrange">3</span>,
+								</p>
+								<p className="sc-pl-8">
+									fp16=<span className="text-codeOrange">True</span>,
+								</p>
+								<p className="sc-pl-8">
+									save_total_limit=<span className="text-codeOrange">2</span>,
+								</p>
+								<p className="sc-pl-8">
+									report_to=
+									<span className="text-codeBlue">&quot;none&quot;</span>
+								</p>
+								<p>)</p>
+								<br />
+								<p>
+									<span className="text-codeRed">from</span> transformers{" "}
+									<span className="text-codeRed">import</span> Trainer,
+									DataCollatorForLanguageModeling
+								</p>
+								<br />
+								<p>trainer = Trainer(</p>
+								<p className="sc-pl-8">model=model,</p>
+								<p className="sc-pl-8">train_dataset=tokenized,</p>
+								<p className="sc-pl-8">args=training_args,</p>
+								<p className="sc-pl-8">
+									data_collator=DataCollatorForLanguageModeling(tokenizer, mlm=
+									<span className="text-codeOrange">False</span>),
+								</p>
+								<p>)</p>
+								<br />
+								<p>trainer.train()</p>
+							</div>
+						</div>
 					</div>
 					<div className="sc-gap-1 -sc-top-7 sc-right-9 absolute flex w-full flex-col items-end">
 						<p className="sc-p-2 sc-w-[403px] sc-text-4 border bg-white">
@@ -390,8 +579,67 @@ const FineTuning = () => {
 				</div>
 
 				<div className="relative">
-					<div className="sc-h-[298px] relative w-full overflow-hidden rounded-lg">
-						<Image src={"/images/image-67.png"} alt={""} fill />
+					<div className="w-full overflow-hidden rounded-lg">
+						<div className="sc-p-[10px] font-firacode sc-gap-5 sc-text-[14px] bg-codeBg flex w-full overflow-hidden rounded-lg">
+							<div className="text-codeGray w-fit pr-4 text-right font-[450]">
+								{Array.from({ length: 14 }, (_, i) => (
+									<p key={i}>{i + 1}</p>
+								))}
+							</div>
+							<div className="text-codeWhite whitespace-pre">
+								<p>
+									<span className="text-codeRed">from</span> transformers{" "}
+									<span className="text-codeRed">import</span> pipeline
+								</p>
+								<p>
+									<span className="text-codeRed">from</span> peft{" "}
+									<span className="text-codeRed">import</span> PeftModel
+								</p>
+								<br />
+								<p>base_model = AutoModelForCausalLM.from_pretrained(</p>
+								<p className="sc-pl-8">
+									<span className="text-codeBlue">
+										&quot;mistralai/Mistral-7B-v0.1&quot;
+									</span>
+									,
+								</p>
+								<p className="sc-pl-8">quantization_config=bnb_config,</p>
+								<p className="sc-pl-8">
+									device_map=
+									<span className="text-codeBlue">&quot;auto&quot;</span>
+								</p>
+								<p>)</p>
+								<br />
+								<p>
+									model = PeftModel.from_pretrained(base_model,{" "}
+									<span className="text-codeBlue">
+										&quot;mistral_lora_finitude&quot;
+									</span>
+									)
+								</p>
+								<br />
+								<p>
+									pipe = pipeline(
+									<span className="text-codeBlue">
+										&quot;text-generation&quot;
+									</span>
+									, model=model, tokenizer=tokenizer)
+								</p>
+								<br />
+								<p>
+									pipe(
+									<span className="text-codeBlue">
+										&quot;[INST] Как работает LoRA? [/INST]&quot;
+									</span>
+									, max_new_tokens=<span className="text-codeOrange">100</span>
+									)[<span className="text-codeOrange">0</span>][
+									<span className="text-codeBlue">
+										&quot;generated_text&quot;
+									</span>
+									]
+								</p>
+							</div>
+						</div>
 					</div>
 					<div className="sc-gap-1 -sc-top-7 sc-right-1 absolute flex w-full flex-col items-end">
 						<p className="sc-p-2 sc-w-[403px] sc-text-4 sc-mr-[100px] border bg-white">

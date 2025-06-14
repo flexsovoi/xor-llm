@@ -1,8 +1,10 @@
 import ImageContainer from "@/abstract/components/ImageContainer/ImageContainer"
+import Title from "@/abstract/components/Text/Title"
 
 const AiMathBegin = () => {
 	return (
 		<div className="sc-gap-6 font-onest sc-text-5 flex flex-col">
+			<Title id="math-nn">Математика нейросетей</Title>
 			<div className="sc-gap-6 flex">
 				<div>
 					<ImageContainer

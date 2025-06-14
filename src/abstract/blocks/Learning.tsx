@@ -1,10 +1,14 @@
+import BlackPoint from "../components/BlackPoint"
 import ImageContainer from "../components/ImageContainer/ImageContainer"
 import InfoBox from "../components/InfoBox/InfoBox"
 import { NumberPoint } from "../components/NumberPoint/NumberPoint"
+import Title from "../components/Text/Title"
 
 const Learning = () => {
 	return (
-		<div className="sc-text-5 sc-gap-6 sc-mt-5 flex flex-col text-[#464646]">
+		<div className="sc-text-5 sc-gap-6 flex flex-col text-[#464646]">
+			<Title id="rl-reasoning">Обучение с подкреплением и ризонинг</Title>
+
 			<div className="sc-gap-6 flex">
 				<div>
 					<ImageContainer
@@ -358,13 +362,13 @@ const Learning = () => {
 				<p>PPO работет в формате Actor-Critic.</p>
 				<div className="sc-text-4 font-semibold text-[#151515]">
 					<p className="sc-gap-2 font-onest flex items-baseline font-medium">
-						<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+						<BlackPoint />
 						Actor – это наша модель, то есть текущая политика, которая совершает
 						действие at, исходя из текущего состояния st (то есть входных
 						данных).
 					</p>
 					<p className="sc-gap-2 font-onest flex items-baseline font-medium">
-						<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+						<BlackPoint />
 						Critic (или value model) – модель, которая оценивает долгосрочную
 						ожидаемую выгоду от политики в текущем состоянии. Это позволяет
 						определить, насколько фактическая награда за действие актора

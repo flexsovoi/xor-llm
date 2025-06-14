@@ -7,8 +7,8 @@ const Year1957 = () => {
 	return (
 		<div>
 			<div className="sc-gap-[24px] flex">
-				<DashedBorderBox viewBox="0 0 250 710">
-					<div className="sc-p-5 sc-w-[250px] sc-h-[710px]">
+				<DashedBorderBox viewBox="0 0 250 740">
+					<div className="sc-p-5 sc-w-[250px] sc-h-[740px]">
 						<SubTitle>1957</SubTitle>
 						<p className="font-onest sc-text-4 text-[#828282]">
 							Люди изобретают первую модель нейрона мозга

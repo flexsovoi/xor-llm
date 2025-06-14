@@ -1,10 +1,13 @@
+import BlackPoint from "@/abstract/components/BlackPoint"
 import ImageContainer from "@/abstract/components/ImageContainer/ImageContainer"
 import InfoBox from "@/abstract/components/InfoBox/InfoBox"
-import SubTitle from "@/abstract/components/SubTitle/SubTitle"
+import Title from "@/abstract/components/Text/Title"
 
 const LineAlgebra = () => {
 	return (
-		<div className="sc-mt-8 sc-gap-6 sc-text-5 flex flex-col">
+		<div className="sc-gap-6 sc-text-5 flex flex-col">
+			<Title id="linear-algebra">Линейная алгебра</Title>
+
 			<div className="font-onest sc-text-5 sc-gap-4 flex flex-col text-[#464646]">
 				<p>
 					Большая часть нашей повседневной математики состоит из манипулирования
@@ -89,11 +92,11 @@ const LineAlgebra = () => {
 							частный случай тензоров.
 						</p>
 						<p className="sc-gap-2 font-onest flex items-baseline font-medium">
-							<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+							<BlackPoint />
 							Вектор – матрица размреа 1×n или n×1 или тензор 1D
 						</p>
 						<p className="sc-gap-2 font-onest flex items-baseline font-medium">
-							<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+							<BlackPoint />
 							Матрица – это тензор 2D.
 						</p>
 					</div>
@@ -126,12 +129,12 @@ const LineAlgebra = () => {
 				тензоры 1D, 2D, 3D и 4D).
 			</p>
 			<div className="sc-gap-2 flex">
-				<div className="sc-p-4 sc-w-[381px] rounded-xl border">
-					<p className="w-full">
+				<InfoBox arrowPosition="bottom" arrowOffset="160px">
+					<p className="sc-w-[381px] sc-p-4 text-[#464646]">
 						Вот пример тензора 4D. Это матрица матриц, поэтому у каждого
 						элемента 4 индекса.
 					</p>
-				</div>
+				</InfoBox>
 				<div className="sc-w-[563px]">
 					<p className="sc-p-4 bg-myblue sc-text-4 rounded-xl border font-bold">
 						На практике такой 4D тензор может возникнуть, если мы, например,
@@ -194,7 +197,7 @@ const LineAlgebra = () => {
 					</div>
 				</div>
 			</div>
-			<SubTitle>Зачем это делать именно так?</SubTitle>
+			<h2 className="sc-text-8 font-bold">Зачем это делать именно так?</h2>
 			<div className="flex">
 				<div className="sc-gap-[18px] flex flex-col">
 					<p>
@@ -302,17 +305,17 @@ const LineAlgebra = () => {
 				<div className="sc-text-4 sc-gap-2 sc-p-4 flex flex-col rounded-lg border">
 					<p className="font-semibold">Например:</p>
 					<p className="sc-gap-2 font-onest flex items-baseline font-medium">
-						<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+						<BlackPoint />
 						Нужно перемножить тензор размерности 2×3×4 на матрицу размерности
 						4×2
 					</p>
 					<p className="sc-gap-2 font-onest flex items-baseline font-medium">
-						<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+						<BlackPoint />
 						Для этого надо перемножить каждую “подматрицу” тензора T на матрицу
 						W.
 					</p>
 					<p className="sc-gap-2 font-onest flex items-baseline font-medium">
-						<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+						<BlackPoint />
 						Получится две матрицы размерности 3 × 2, то есть итоговый тензор
 						будет иметь размерность 2 × 3 × 2.
 					</p>

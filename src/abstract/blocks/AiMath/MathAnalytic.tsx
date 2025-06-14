@@ -1,12 +1,14 @@
 import BlueCheckMark from "@/abstract/components/BlueCheckMark/BlueCheckMark"
 import ImageContainer from "@/abstract/components/ImageContainer/ImageContainer"
 import InfoBox from "@/abstract/components/InfoBox/InfoBox"
+import Title from "@/abstract/components/Text/Title"
 import Image from "next/image"
 import MathSvgBlock from "./SvgBlock"
 
 const MathAnalytic = () => {
 	return (
 		<div className="sc-text-5">
+			<Title id="calculus">Математический анализ</Title>
 			<div className="sc-gap-4 flex flex-col text-[#464646]">
 				<p>
 					Математический анализ — это раздел математики, который изучает

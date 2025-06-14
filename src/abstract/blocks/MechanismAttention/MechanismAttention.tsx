@@ -1,9 +1,12 @@
+import BlackPoint from "@/abstract/components/BlackPoint"
 import ImageContainer from "@/abstract/components/ImageContainer/ImageContainer"
 import InfoBox from "@/abstract/components/InfoBox/InfoBox"
+import Title from "@/abstract/components/Text/Title"
 
 const MechanismAttention = () => {
 	return (
 		<div className="sc-text-5 sc-gap-6 flex flex-col text-[#464646]">
+			<Title id="attention">Механизм внимания</Title>
 			<div className="sc-mt-8 sc-gap-6 flex">
 				<div>
 					<ImageContainer
@@ -121,12 +124,12 @@ const MechanismAttention = () => {
 			<div className="sc-text-4 sc-p-4 rounded-lg border font-semibold text-[#151515]">
 				<p>Например:</p>
 				<p className="sc-gap-2 flex items-baseline font-medium">
-					<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+					<BlackPoint />
 					Предположим, что сети поступает на вход предложение «Маша дала яблоко
 					Саше, она была голодна»
 				</p>{" "}
 				<p className="sc-gap-2 flex items-baseline font-medium">
-					<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+					<BlackPoint />
 					А затем мы просим её ответить на вопрос «Кто был голоден?»
 				</p>
 			</div>

@@ -1,3 +1,4 @@
+import Title from "@/abstract/components/Text/Title"
 import VerticalDashedLine from "@/abstract/components/VerticalDashedLine/VerticalDashedLine"
 import AiWinter from "./AiWinter"
 import Begin from "./Begin"
@@ -15,6 +16,7 @@ import Year2025 from "./Year2025"
 const HistoryBlock = () => {
 	return (
 		<div>
+			<Title id="history-llm">История LLM</Title>
 			<Begin />
 			<VerticalDashedLine
 				className="sc-h-[36px] sc-ml-[42px] sc-my-2"

@@ -1,9 +1,13 @@
+import BlackPoint from "@/abstract/components/BlackPoint"
 import ImageContainer from "@/abstract/components/ImageContainer/ImageContainer"
 import InfoBox from "@/abstract/components/InfoBox/InfoBox"
+import Title from "@/abstract/components/Text/Title"
 
 const Transformers = () => {
 	return (
 		<div className="sc-text-5 sc-gap-6 sc-mt-5 flex flex-col text-[#464646]">
+			<Title id="transformers">Трансформеры</Title>
+
 			<div className="sc-gap-6 flex">
 				<div>
 					<ImageContainer
@@ -342,15 +346,15 @@ const Transformers = () => {
 					Трансформеры действительно очень сложно заменить, потому что они:{" "}
 				</p>
 				<p className="sc-gap-2 flex items-baseline font-medium">
-					<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+					<BlackPoint />
 					обучаются быстро и параллельно;
 				</p>
 				<p className="sc-gap-2 flex items-baseline font-medium">
-					<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+					<BlackPoint />
 					могут обрабатывать длинные последовательности;
 				</p>
 				<p className="sc-gap-2 flex items-baseline font-medium">
-					<span className="sc-w-3 sc-h-3 sc-border-4 rounded-full"></span>
+					<BlackPoint />
 					универсальны и масштабируемы.
 				</p>
 			</div>

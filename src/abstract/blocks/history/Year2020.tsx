@@ -51,7 +51,7 @@ const Year2020 = () => {
 					</div>
 				</div>
 				<div className="sc-p-4 bg-myblue rounded-xl border">
-					<p className="font-onest sc-text-5 font-medium">
+					<p className="font-onest sc-text-4 font-medium">
 						В профессиональном сленге до сих пор используется выражение “GPT-3
 						moment” для обозначения чего-то переломного, чего-то, что полностью
 						изменило рынок.
