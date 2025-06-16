@@ -19,13 +19,13 @@ const Year1957 = () => {
 					<p className="font-onest sc-text-5 sc-mt-5">
 						Фрэнком Розенблаттом был изобретен{" "}
 						<span className="font-bold">перцептрон</span> — простейшая нейронная
-						сеть и первую математическую модель нейрона мозга.
+						сеть и первая математическая модель нейрона мозга.
 						Вот как перцептрон выглядел:
 					</p>
 					<div className="relative">
-						<div className="sc-w-[460px] sc-h-[215px] sc-top-[50px] -sc-left-[40px] absolute">
+						<div className="sc-w-[460px] sc-h-[215px] sc-top-[50px] -sc-left-[20px] absolute">
 							<ImageContainer src="/images/image-2.png" />
-							<div className="sc-right-[455px] sc-top-[45px] sc-w-[230px] absolute">
+							<div className="sc-right-[460px] sc-top-[45px] sc-w-[230px] absolute">
 								<InfoBox arrowOffset="55px">
 									<p className="font-onest sc-text-5 sc-p-[16px] text-[#707070]">
 										На вход поступают несколько значений (числа)

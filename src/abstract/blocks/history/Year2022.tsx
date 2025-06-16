@@ -17,7 +17,7 @@ const Year2022 = () => {
 					<ImageContainer
 						fit="cover"
 						src={"/images/image-9.png"}
-						className="sc-w-[225px] sc-h-[156px] rotate-[0.5]"
+						className="sc-w-[215px] sc-h-[156px] rotate-[0.5]"
 					/>
 				</div>
 			</DashedBorderBox>

@@ -221,12 +221,37 @@ const Transformers = () => {
 				</div>
 			</div>
 			<div className="sc-gap-3 relative flex w-3/4 self-end">
-				<div className="sc-w-[213px] -sc-left-[200px] sc-top-[66px] absolute">
-					<InfoBox arrowPosition="right" arrowOffset="73px">
-						<p className="sc-p-4">
-							Меняем масштаб с помощью обучаемых параметров
-						</p>
-					</InfoBox>
+				<div className="-sc-left-[200px] sc-top-[66px] absolute">
+					<div className="sc-w-[213px]">
+						{" "}
+						<InfoBox arrowPosition="right" arrowOffset="73px">
+							<p className="sc-p-4">
+								Меняем масштаб с помощью обучаемых параметров
+							</p>
+						</InfoBox>
+					</div>
+
+					<div className="z sc-w-[327px] sc-mt-[80px] relative">
+						<InfoBox arrowPosition="right" arrowOffset="40px">
+							<p className="sc-p-4">
+								Делим каждый токен на стандартное отклонение и вычитаем среднее
+							</p>
+						</InfoBox>
+						<svg
+							className="sc-w-[55px] sc-h-[140px] -sc-right-[65px] -sc-top-[95px] absolute z-20"
+							viewBox="0 0 55 140"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M1 138.494C10.4408 138.88 19.5872 139.98 28.562 136.862C32.1398 135.619 35.8755 133.809 39.1684 132.031C44.7135 129.036 48.353 122.418 46.9608 116.623C45.7564 111.61 35.8418 105.245 30.2215 108.071C27.9722 109.201 28.2734 111.898 28.2734 113.816C28.2734 115.712 29.5436 116.166 31.6646 116.166C33.8291 116.166 35.9937 116.166 38.1582 116.166C42.2608 116.166 44.5273 114.732 47.8987 112.771C55.7564 108.2 55.1457 96.2612 51.0013 89.5943C40.925 73.3854 30.8277 56.7362 27.119 38.2788C24.5699 25.5929 28.9228 13.5718 28.9228 1"
+								stroke="black"
+								strokeWidth={2}
+								strokeLinecap="round"
+								strokeDasharray="8 8"
+							/>
+						</svg>
+					</div>
 				</div>
 				<div>
 					<ImageContainer
@@ -255,7 +280,7 @@ const Transformers = () => {
 					</p>
 				</div>
 			</div>
-			<div className="sc-gap-5 flex">
+			<div className="sc-gap-5 sc-mt-[80px] flex">
 				<div className="sc-gap-4 flex flex-col">
 					<div>
 						<strong>Эмбеддинги и позиционные эмбеддинги</strong>
@@ -288,7 +313,7 @@ const Transformers = () => {
 						<p>
 							Для каждого токена входной последовательности декодер должен
 							предсказать следующий. Но, вспомним, что у трансформера нет
-							рекуррентности, и все токены обработываются одновременно, так что
+							рекуррентности, и все токены обработываются одновременно, так что{" "}
 							<strong>
 								при обучении в Decoder мы подаем всю выходную последовательность
 								сразу.
@@ -428,7 +453,6 @@ const Transformers = () => {
 							Вот так выглядит полная архитектура. Как видите, все остаётся
 							как было, только мы избавляемся от тяжеловесного энкодера.
 						</strong>
-						.
 					</p>
 				</div>
 				<div>

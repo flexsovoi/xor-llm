@@ -23,19 +23,19 @@ const AiWinter = () => {
 
 			<div>
 				<p className="font-onest sc-text-5 font-medium">Причины:</p>
-				<div className="sc-gap-2 flex items-center">
+				<div className="sc-gap-2 flex items-baseline">
 					<BluePoint />
 					<p className="font-onest sc-text-5 font-medium">
 						Завышенные ожидания
 					</p>
 				</div>
-				<div className="sc-gap-2 flex items-center">
+				<div className="sc-gap-2 flex items-baseline">
 					<BluePoint />
 					<p className="font-onest sc-text-5 font-medium">
 						Критика потенциала нейросетей
 					</p>
 				</div>
-				<div className="sc-gap-2 flex items-center">
+				<div className="sc-gap-2 flex items-baseline">
 					<BluePoint />
 					<p className="font-onest sc-text-5 font-medium">
 						Отсутствие результатов

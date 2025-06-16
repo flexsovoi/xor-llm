@@ -144,7 +144,7 @@ const MathAnalytic = () => {
 					</div>
 				</ol>
 			</div>
-			<div className="sc-gap-5 flex flex-col text-[#464646]">
+			<div className="sc-gap-5 sc-mt-5 flex flex-col text-[#464646]">
 				<p>Математически все это можно записать одной формулой:</p>
 				<div className="sc-gap-4 flex">
 					<InfoBox arrowPosition="bottom" arrowOffset="20px">
@@ -343,7 +343,7 @@ const MathAnalytic = () => {
 					<strong>вычислять градиенты лосса.</strong> Это не так сложно, когда
 					речь идет о небольшой игрушечной нейросети вроде вот этой
 				</p>
-				<div className="sc-gap-3 flex">
+				<div className="sc-gap-6 flex">
 					<div>
 						<ImageContainer
 							src={"/images/image-28.png"}

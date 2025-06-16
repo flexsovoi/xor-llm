@@ -20,11 +20,11 @@ const Year2017 = () => {
 					<ImageContainer
 						fit="cover"
 						src={"/images/image-7.png"}
-						className="sc-w-[307px] sc-h-[347px] rotate-[0.5]"
+						className="sc-w-[307px] sc-h-[369px] rotate-[0.5]"
 					/>
 				</div>
 			</DashedBorderBox>
-			<div className="sc-gap-4 sc-mt-5 flex flex-col">
+			<div className="sc-gap-4 sc-mt-7 flex flex-col">
 				<p className="sc-text-5 sc-w-[690px]">
 					В 2017 группа исследователей из Google совершила главный нейросетевой
 					прорыв начала 21 века: они выпустили статью “Attention is All You

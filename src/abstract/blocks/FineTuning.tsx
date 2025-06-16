@@ -410,7 +410,7 @@ const FineTuning = () => {
 						<p className="sc-p-2 sc-w-[435px] sc-text-4 sc-mr-[60px] border bg-white">
 							{`# Грузим локальные данные. Здесь они в формате json вида {"instruction": "...", "output": "..."}.`}
 						</p>
-						<div className="sc-p-2 sc-w-[590px] sc-text-4 sc-mt-[120px] border bg-white">
+						<div className="sc-p-2 sc-w-[590px] sc-text-4 sc-mt-[130px] border bg-white">
 							<p>{`# Данные форматируем под модель. В данном случае нужно обернуть каждый пример в специальные токены `}</p>{" "}
 							<p>{`[INST] ... [/INST]. Это важно для обучения модели правильно понимать промпт-ответ.`}</p>
 						</div>
@@ -566,7 +566,7 @@ const FineTuning = () => {
 						<p className="sc-p-2 sc-w-[403px] sc-text-4 border bg-white">
 							{`# Обозначаем параметры обучения: сколько будет эпох, какой будет размер батча, куда загружать обученную модель и так далее.`}
 						</p>
-						<div className="sc-p-2 sc-w-[553px] sc-text-4 sc-mt-[250px] border bg-white">
+						<div className="sc-p-2 sc-w-[553px] sc-text-4 sc-mt-[260px] border bg-white">
 							<p>{`# Запускаем обучения с нашим датасетом, параметрами обучения и предобученной моделью с адаптером`}</p>
 						</div>
 					</div>

@@ -13,7 +13,7 @@ const Year1997 = () => {
 				<div className="sc-p-5 sc-w-[250px]">
 					<SubTitle>1997</SubTitle>
 					<p className="font-onest sc-text-4 text-[#525252]">
-						Мы научились эффективно обучать нейросети
+						Первые языковые модели
 					</p>
 				</div>
 				<div className="sc-left-[40px] sc-bottom-12 absolute flex">
