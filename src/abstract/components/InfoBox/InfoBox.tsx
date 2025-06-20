@@ -6,12 +6,14 @@ interface InfoBoxProps {
 	arrowPosition?: ArrowPosition
 	arrowOffset?: string
 	children: React.ReactNode
+	isBorder?: boolean
 }
 
 const InfoBox: React.FC<InfoBoxProps> = ({
 	arrowPosition = "right",
 	arrowOffset = 0,
 	children,
+	isBorder = true,
 }) => {
 	const isVertical = arrowPosition === "left" || arrowPosition === "right"
 
@@ -48,7 +50,9 @@ const InfoBox: React.FC<InfoBoxProps> = ({
 	}
 
 	return (
-		<div className="relative z-10 w-fit rounded-lg border border-[#D8D8D8] bg-white">
+		<div
+			className={`relative z-10 w-fit rounded-lg border border-[#D8D8D8] bg-white ${isBorder ? "border" : "border-0"}`}
+		>
 			<div
 				className={`absolute ${getArrowPositionClass()} sc-w-[6px] sc-h-[10px]`}
 				style={offsetStyle}

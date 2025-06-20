@@ -1,4 +1,5 @@
 import BlackPoint from "@/abstract/components/BlackPoint"
+import { BlueNumberMark } from "@/abstract/components/BlueCheckMark/BlueCheckMark"
 import ImageContainer from "@/abstract/components/ImageContainer/ImageContainer"
 import InfoBox from "@/abstract/components/InfoBox/InfoBox"
 import Title from "@/abstract/components/Text/Title"
@@ -155,7 +156,7 @@ const MechanismAttention = () => {
 				</div>
 			</div>
 			<div className="flex">
-				<div className="sc-w-[325px]">
+				<div className="sc-w-[330px] sc-ml-3">
 					<InfoBox arrowPosition="top" arrowOffset="310px">
 						<p className="sc-p-4">
 							Результат «работы» функции — выходные данные.
@@ -163,7 +164,7 @@ const MechanismAttention = () => {
 					</InfoBox>
 				</div>
 				<svg
-					className="sc-w-[2px] sc-h-[132px] sc-ml-[85px] sc-bottom-5 relative"
+					className="sc-w-[2px] sc-h-[132px] sc-ml-[70px] sc-bottom-5 relative"
 					viewBox="0 0 2 132"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -176,12 +177,12 @@ const MechanismAttention = () => {
 					/>
 				</svg>
 				<div className="sc-w-[360px] sc-ml-[170px]">
-					<InfoBox arrowPosition="top" arrowOffset="310px">
+					<InfoBox arrowPosition="top" arrowOffset="295px">
 						<p className="sc-p-4">Сначала она посмотрит на предыдущий токен</p>
 					</InfoBox>
 				</div>
 				<svg
-					className="sc-w-[2px] sc-h-[163px] sc-ml-[30px] sc-bottom-5 relative"
+					className="sc-w-[2px] sc-h-[163px] sc-ml-[27px] sc-bottom-5 relative"
 					viewBox="0 0 2 163"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +197,7 @@ const MechanismAttention = () => {
 			</div>
 			<div className="sc-gap-5 sc-bottom-10 relative flex justify-end">
 				<div className="sc-w-[447px] sc-bottom-10 relative">
-					<InfoBox arrowPosition="top" arrowOffset="205px">
+					<InfoBox arrowPosition="top" arrowOffset="208px">
 						<p className="sc-p-4">
 							Затем определит, что самый релевантный токен для «голоден» – токен
 							«она»
@@ -246,28 +247,37 @@ const MechanismAttention = () => {
 					токена нам понадобится расчитать три вектора:
 				</p>
 				<div className="sc-gap-2 flex flex-col">
-					<div className="sc-p-3 sc-gap-2 flex flex-col border">
-						<span className="sc-text-4 text-[#151515]">Запрос (Query)</span>
-						<p className="sc-text-[14px]">
-							Это то, с помощью чего конкретный токен «смотрит» на другие
-							токены. Он пытается найти среди них нужную информацию, чтобы лучше
-							понять самого себя.
-						</p>
+					<div className="sc-p-3 sc-gap-2 flex justify-baseline border">
+						<BlueNumberMark number={1} />
+						<div className="sc-gap-2 flex flex-col">
+							<span className="sc-text-4 text-[#151515]">Запрос (Query)</span>
+							<p className="sc-text-[14px]">
+								Это то, с помощью чего конкретный токен «смотрит» на другие
+								токены. Он пытается найти среди них нужную информацию,
+								чтобы лучше понять самого себя.
+							</p>
+						</div>
 					</div>
-					<div className="sc-p-3 sc-gap-2 flex flex-col border">
-						<span className="sc-text-4 text-[#151515]">Ключ (Key)</span>
-						<p className="sc-text-[14px]">
-							То, что отвечает на запрос токена. С помощью ключа вычисляется,
-							насколько важен конкретный токен для запроса (это веса внимания).
-						</p>
+					<div className="sc-p-3 sc-gap-2 flex justify-baseline border">
+						<BlueNumberMark number={2} />
+						<div className="sc-gap-2 flex flex-col">
+							<span className="sc-text-4 text-[#151515]">Ключ (Key)</span>
+							<p className="sc-text-[14px]">
+								То, что отвечает на запрос токена. С помощью ключа вычисляется,
+								насколько важен конкретный токен для запроса (это веса
+								внимания).
+							</p>
+						</div>
 					</div>
-
-					<div className="sc-p-3 sc-gap-2 flex flex-col border">
-						<span className="sc-text-4 text-[#151515]">Значение (Value)</span>
-						<p className="sc-text-[14px]">
-							Информация, которую токен передаёт другим токенам,
-							если они посчитали его важным.
-						</p>
+					<div className="sc-p-3 sc-gap-2 flex justify-baseline border">
+						<BlueNumberMark number={3} />
+						<div className="sc-gap-2 flex flex-col">
+							<span className="sc-text-4 text-[#151515]">Значение (Value)</span>
+							<p className="sc-text-[14px]">
+								Информация, которую токен передаёт другим токенам,
+								если они посчитали его важным.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

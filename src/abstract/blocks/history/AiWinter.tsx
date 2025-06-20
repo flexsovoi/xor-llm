@@ -10,8 +10,8 @@ const AiWinter = () => {
 				height={200}
 			/>
 			<div className="sc-w-[595px] sc-h-[136px]">
-				<InfoBox arrowOffset="50px" arrowPosition="left">
-					<div className="sc-p-4 flex h-fit flex-col rounded-[8px] border bg-[#5DFBFB]">
+				<InfoBox arrowOffset="50px" arrowPosition="left" isBorder={false}>
+					<div className="sc-p-4 flex h-fit flex-col rounded-lg border bg-[#5DFBFB]">
 						<p className="font-onest sc-text-5 font-medium">
 							В этот период (70-е годы) случилась так называемая «ИИ—зима»
 							Интерес общества и финансирование исследований сильно сократились,

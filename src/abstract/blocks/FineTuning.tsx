@@ -350,7 +350,7 @@ const FineTuning = () => {
 						<p className="sc-p-2 sc-w-[195px] sc-text-4 border bg-white">
 							# Грузим модель, автоматически раскидывая слои по GPU
 						</p>
-						<p className="sc-p-2 sc-w-[437px] sc-text-4 sc-mr-10 border bg-white">
+						<p className="sc-p-2 sc-w-[437px] sc-text-4 sc-mr-10 sc-mt-2 border bg-white">
 							# Загружаем соответствующий модели токенизатор и добавляем
 							так называемый pad_token: он нужен для корректной обработки батчей
 						</p>
@@ -476,7 +476,7 @@ const FineTuning = () => {
 						<div className="sc-p-2 sc-w-[456px] sc-text-4 sc-mr-6 border bg-white">
 							<p>{`# target_modules — это список слоёв модели, в которые будут внедрены LoRA-адаптеры. В данном случае выбираем Query и Value проекции`}</p>
 						</div>{" "}
-						<div className="sc-p-2 sc-w-[368px] sc-text-4 sc-ml-10 sc-mt-7 self-start border bg-white">
+						<div className="sc-p-2 sc-w-[368px] sc-text-4 sc-ml-10 sc-mt-9 self-start border bg-white">
 							<p>{`# Этой командой можно посмотреть, сколько параметров в итоге будем обучать`}</p>
 						</div>
 					</div>
@@ -668,7 +668,7 @@ const FineTuning = () => {
 			</p>
 			<p>
 				Однако файнтюнинг — не единственный способ донастройки моделей. В
-				последнее время всё большее внимание получают подходы, основанные на
+				последнее время всё большее внимание получают подходы, основанные на{" "}
 				<strong>обучении с подкреплением (reinforcement learning, RL).</strong>О
 				том, как они работают и почему стали настолько популярными – в следующей
 				главе.

@@ -46,7 +46,7 @@ const Year2020 = () => {
 					<div className="sc-gap-3 sc-text-5 flex items-baseline">
 						<BluePoint />
 						<p className="font-onest sc-w-[680px] font-medium">
-							Качество текста впервые стало почти человеческим
+							Качество текста впервые стало почти человеческим.
 						</p>
 					</div>
 				</div>

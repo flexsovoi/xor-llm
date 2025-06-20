@@ -47,14 +47,14 @@ const Year2024 = () => {
 						strokeWidth="2"
 					/>
 				</svg>
-				<div className="sc-gap-3 flex justify-center">
-					<div className="flex w-2/5 justify-end">
+				<div className="flex justify-center">
+					<div className="-sc-mr-6 flex w-2/5 justify-end">
 						<p className="sc-p-4 sc-text-5 w-3/4 rounded-xl border font-medium">
 							Роста количества обучающих данных и параметров
 						</p>
 					</div>
 					<div className="w-3/5">
-						<p className="sc-p-4 sc-text-5 w-4/5 rounded-xl border font-medium">
+						<p className="sc-p-4 sc-text-5 sc-ml-10 w-4/5 rounded-xl border font-medium">
 							Длительности рассуждений LLM во время инференса (то есть
 							непосредственно работы)
 						</p>
@@ -63,7 +63,7 @@ const Year2024 = () => {
 				<div className="sc-gap-3 sc-w-[772px] relative right-[60px] flex justify-between">
 					<div className="sc-w-[388px]">
 						<InfoBox arrowPosition="top" arrowOffset="280px">
-							<div className="bg-myblue 4 sc-p-4 sc-gap-3 sc-text-4 flex flex-col rounded-xl border">
+							<div className="bg-myblue 4 sc-p-4 sc-gap-3 sc-text-4 flex flex-col rounded-lg border">
 								<p className="font-medium text-[#151515]">
 									Вот об этом мы знали давно. Но бесконечно масштабировать сети
 									таким образом не получится.
@@ -80,7 +80,7 @@ const Year2024 = () => {
 					</div>
 					<div className="sc-w-[372px]">
 						<InfoBox arrowPosition="top" arrowOffset="181px">
-							<div className="bg-myblue sc-p-4 sc-gap-3 sc-text-4 flex flex-col rounded-xl border">
+							<div className="bg-myblue sc-p-4 sc-gap-3 sc-text-4 flex flex-col rounded-lg border">
 								<p className="font-medium text-[#151515]">
 									Вот эту идею доказала как раз модель o1, выпущенная OpenAI:
 									она стала думать перед ответом.{" "}

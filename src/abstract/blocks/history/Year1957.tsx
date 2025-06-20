@@ -23,7 +23,7 @@ const Year1957 = () => {
 						Вот как перцептрон выглядел:
 					</p>
 					<div className="relative">
-						<div className="sc-w-[460px] sc-h-[215px] sc-top-[50px] -sc-left-[20px] absolute">
+						<div className="sc-w-[480px] sc-h-[215px] sc-top-[50px] -sc-left-[50px] absolute">
 							<ImageContainer src="/images/image-2.png" />
 							<div className="sc-right-[460px] sc-top-[45px] sc-w-[230px] absolute">
 								<InfoBox arrowOffset="55px">

@@ -18,7 +18,6 @@ const Year2017 = () => {
 				</div>
 				<div className="sc-left-[140px] absolute flex">
 					<ImageContainer
-						fit="cover"
 						src={"/images/image-7.png"}
 						className="sc-w-[307px] sc-h-[369px] rotate-[0.5]"
 					/>

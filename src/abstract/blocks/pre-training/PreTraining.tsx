@@ -42,7 +42,7 @@ const PreTraining = () => {
 			<div className="sc-gap-6 flex">
 				<div className="sc-gap-8 flex w-1/2 flex-col">
 					<div className="flex flex-col items-center">
-						<div className="sc-gap-4 flex items-baseline">
+						<div className="sc-gap-4 relative flex items-baseline">
 							<div>
 								<NumberPoint>1</NumberPoint>
 							</div>
@@ -50,6 +50,22 @@ const PreTraining = () => {
 								Во‑первых, мы разобьём этот текст на токены, а токенам
 								сопоставим их id.
 							</p>
+							<svg
+								className="sc-w-[31px] sc-h-[88px] sc-top-[31px] sc-left-5 absolute"
+								width="31"
+								height="88"
+								viewBox="0 0 31 88"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M1.59375 1.60938C5.44624 13.5754 8.58177 26.2759 14.0364 37.681C18.5108 47.0367 23.8397 55.5047 27.1968 65.6171C29.47 72.4643 30.6879 80.1702 27.4361 86.6738"
+									stroke="#F3F3F3"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-dasharray="8 8"
+								/>
+							</svg>
 						</div>
 						<div>
 							<ImageContainer
@@ -59,7 +75,7 @@ const PreTraining = () => {
 						</div>
 					</div>
 					<div className="flex flex-col items-center">
-						<div className="sc-gap-4 flex items-baseline">
+						<div className="sc-gap-4 relative flex items-baseline">
 							<div>
 								<NumberPoint>3</NumberPoint>
 							</div>
@@ -68,12 +84,27 @@ const PreTraining = () => {
 								обучения. Модель получает задание: предсказать следующий токен в
 								каждом месте последовательности.
 							</p>
+							<svg
+								className="sc-w-[501px] sc-h-[57px] -sc-top-[30px] sc-left-5 absolute -z-2"
+								width="501"
+								height="57"
+								viewBox="0 0 501 57"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M499.605 1.10156C494.54 9.23657 486.067 24.7023 475.677 28.8582C472.27 30.221 467.158 33.4045 463.473 33.4045C452.401 33.4045 439.643 37.6964 429.017 32.8661C423.54 30.3764 417.866 28.846 412.387 26.1064C397.228 18.5269 377.17 14.0227 360.044 14.0227C351.649 14.0227 343.255 14.0227 334.86 14.0227C328.049 14.0227 318.237 14.5589 311.769 16.7147C296.365 21.8492 279.661 24.8087 263.494 27.7216C253.058 29.602 241.018 30.9719 230.414 31.251C220.54 31.5108 209.763 33.0269 200.025 34.7206C188.082 36.7976 175.177 35.5581 163.056 35.5581C128.896 35.5581 94.7327 34.4813 60.5239 34.4813C46.9483 34.4813 34.3565 39.4883 21.4612 42.4972C12.7843 44.5218 6.23136 48.2633 1.0625 56.0166"
+									stroke="#D2D2D2"
+									stroke-linecap="round"
+									stroke-dasharray="4 4"
+								/>
+							</svg>
 						</div>
 					</div>
 				</div>
 				<div className="w-1/2">
 					<div className="flex flex-col items-center">
-						<div className="sc-gap-4 flex items-baseline">
+						<div className="sc-gap-4 relative flex items-baseline">
 							<div>
 								<NumberPoint>2</NumberPoint>
 							</div>
@@ -85,6 +116,21 @@ const PreTraining = () => {
 								предсказании. У современных моделей контекст достигает сотен
 								тысяч токенов.
 							</p>
+							<svg
+								className="sc-w-[174px] sc-h-[77px] sc-top-[30px] sc-right-[480px] absolute -z-2"
+								width="174"
+								height="77"
+								viewBox="0 0 174 77"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M1.47656 70.0579C20.069 73.1958 37.3689 75.4417 56.0327 75.4417C64.4882 75.4417 74.0955 76.6594 82.4733 75.2024C92.2115 73.5088 102.745 71.8402 112.623 71.1346C116.303 70.8717 123.046 67.4115 125.544 64.9133C128.755 61.7026 132.658 58.5939 136.072 55.5215C143.951 48.4309 142.22 36.9489 143.669 27.5256C144.659 21.0958 149.445 15.9862 151.087 10.2376C153.742 0.944535 164.429 1.14487 172.682 1.14487"
+									stroke="#D2D2D2"
+									stroke-linecap="round"
+									stroke-dasharray="4 4"
+								/>
+							</svg>
 						</div>
 						<div>
 							<ImageContainer
@@ -161,7 +207,7 @@ const PreTraining = () => {
 				</div>
 				<div className="w-1/2">
 					<div className="flex flex-col items-center">
-						<div className="sc-gap-4 flex items-baseline">
+						<div className="sc-gap-4 relative flex items-baseline">
 							<div>
 								<NumberPoint>5</NumberPoint>
 							</div>
@@ -169,6 +215,21 @@ const PreTraining = () => {
 								Предсказания модель делает в виде вероятностей для каждого
 								возможного следующего токена.
 							</p>
+							<svg
+								className="sc-w-[106px] sc-h-[206px] sc-top-[10px] -sc-left-[80px] absolute -z-2"
+								width="106"
+								height="206"
+								viewBox="0 0 106 206"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M0.65625 203.268C19.3646 204.641 43.7926 209.549 60.1005 198.073C69.2214 191.655 73.4947 179.937 72.278 168.986C70.8536 156.166 60.9531 142.794 56.1761 131.069C47.066 108.708 46.3649 81.8932 46.3649 57.8311C46.3649 39.9165 47.6695 12.5828 68.6998 7.90943C80.4748 5.29275 92.3086 0.695312 104.539 0.695312"
+									stroke="#D2D2D2"
+									stroke-linecap="round"
+									stroke-dasharray="4 4"
+								/>
+							</svg>
 						</div>
 						<div className="sc-p-3 border">
 							<p>Например, предсказываем токен после «Гарри Поттер взял».</p>
@@ -193,16 +254,17 @@ const PreTraining = () => {
 							<strong>алгоритм обратного распространения ошибки.</strong>
 						</p>
 						<p>
-							На практике такие чанки обрабатываются партиями (батчами). На вход
-							модели поступает батч (например, это 32 окна по 512 токенов),
-							который проходит через модель. Сначала прямой проход, затем
-							обратный. Это один шаг обучения, называемый итерацией.{" "}
+							На практике такие чанки обрабатываются партиями (
+							<strong>батчами</strong>). На вход модели поступает батч
+							(например, это 32 окна по 512 токенов), который проходит через
+							модель. Сначала прямой проход, затем обратный. Это один шаг
+							обучения, называемый <strong>итерацией</strong>.
 						</p>
 						<p>
 							Спустя несколько итераций модель увидит весь датасет. Это
-							называется эпоха. Обычно таких эпох по время обучения много, то
-							есть мы несколько раз гоняем датасет по модели для того, чтобы она
-							хорошо его усвоила.
+							называется <strong>эпоха</strong>. Обычно таких эпох по время
+							обучения много, то есть мы несколько раз гоняем датасет по модели
+							для того, чтобы она хорошо его усвоила.
 						</p>
 					</div>
 				</div>
@@ -241,50 +303,53 @@ const PreTraining = () => {
 					<strong>self-supervised learning (самообучение).</strong>
 				</p>
 				<div className="sc-mt-3 sc-gap-2 flex">
-					<div className="sc-p-3 flex w-1/2 flex-col justify-between border">
-						<svg
-							className="sc-w-[24px] sc-h-[24px]"
-							viewBox="0 0 24 24"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<rect
-								x={0.5}
-								y={0.5}
-								width={23}
-								height={23}
-								rx={11.5}
-								fill="white"
-							/>
-							<rect
-								x={0.5}
-								y={0.5}
-								width={23}
-								height={23}
-								rx={11.5}
-								stroke="#151515"
-							/>
-							<g clipPath="url(#clip0_1_3934)">
-								<path
-									d="M11.3335 11.332V7.33203H12.6668V11.332H16.6668V12.6654H12.6668V16.6654H11.3335V12.6654H7.3335V11.332H11.3335Z"
-									fill="#151515"
+					<div className="sc-p-3 sc-gap-3 flex w-1/2 flex-col border">
+						<div className="sc-gap-3 flex items-center">
+							<svg
+								className="sc-w-[24px] sc-h-[24px]"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<rect
+									x={0.5}
+									y={0.5}
+									width={23}
+									height={23}
+									rx={11.5}
+									fill="white"
 								/>
-							</g>
-							<defs>
-								<clipPath id="clip0_1_3934">
-									<rect
-										width={16}
-										height={16}
-										fill="white"
-										transform="translate(4 4)"
+								<rect
+									x={0.5}
+									y={0.5}
+									width={23}
+									height={23}
+									rx={11.5}
+									stroke="#151515"
+								/>
+								<g clipPath="url(#clip0_1_3934)">
+									<path
+										d="M11.3335 11.332V7.33203H12.6668V11.332H16.6668V12.6654H12.6668V16.6654H11.3335V12.6654H7.3335V11.332H11.3335Z"
+										fill="#151515"
 									/>
-								</clipPath>
-							</defs>
-						</svg>
+								</g>
+								<defs>
+									<clipPath id="clip0_1_3934">
+										<rect
+											width={16}
+											height={16}
+											fill="white"
+											transform="translate(4 4)"
+										/>
+									</clipPath>
+								</defs>
+							</svg>
+							<strong className="sc-text-5">Главное преимущество</strong>
+						</div>
 						<div className="sc-text-4 sc-gap-3 flex flex-col">
 							<p>
-								Главное преимущество self-supervised learning – это огромное
-								количество доступных данных.
+								Self-supervised learning – это огромное количество доступных
+								данных.
 							</p>
 							<p>
 								Нет необходимости в ручной разметке, что позволяет использовать
@@ -293,36 +358,38 @@ const PreTraining = () => {
 						</div>
 					</div>
 					<div className="sc-p-3 sc-gap-3 flex w-1/2 flex-col justify-between border">
-						<svg
-							className="sc-w-[24px] sc-h-[24px]"
-							viewBox="0 0 24 24"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<rect width={24} height={24} rx={12} fill="#151515" />
-							<g clipPath="url(#clip0_1_3938)">
-								<path
-									d="M7.3335 11.332H16.6668V12.6654H7.3335V11.332Z"
-									fill="white"
-								/>
-							</g>
-							<defs>
-								<clipPath id="clip0_1_3938">
-									<rect
-										width={16}
-										height={16}
+						<div className="sc-gap-3 flex items-center">
+							<svg
+								className="sc-w-[24px] sc-h-[24px]"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<rect width={24} height={24} rx={12} fill="#151515" />
+								<g clipPath="url(#clip0_1_3938)">
+									<path
+										d="M7.3335 11.332H16.6668V12.6654H7.3335V11.332Z"
 										fill="white"
-										transform="translate(4 4)"
 									/>
-								</clipPath>
-							</defs>
-						</svg>
+								</g>
+								<defs>
+									<clipPath id="clip0_1_3938">
+										<rect
+											width={16}
+											height={16}
+											fill="white"
+											transform="translate(4 4)"
+										/>
+									</clipPath>
+								</defs>
+							</svg>
+							<strong className="sc-text-5">Но есть и нюанс:</strong>
+						</div>
 						<div className="sc-text-4 sc-gap-3 flex flex-col">
 							<p>
-								Но есть и нюанс: модель учится исключительно на закономерностях
-								в данных. Если данные некачественные, ограниченные или содержат
-								предвзятости (bias), то модель обязательно перенимает эти
-								недостатки.
+								Модель учится исключительно на закономерностях в данных. Если
+								данные некачественные, ограниченные или содержат предвзятости
+								(bias), то модель обязательно перенимает эти недостатки.
 							</p>
 							<p>
 								<strong>
@@ -405,15 +472,7 @@ const PreTraining = () => {
 				Почему чем больше данных – тем лучше?
 			</h3>
 			<div>
-				<p>
-					Обратите внимание, что в алгоритме выше мы используем{" "}
-					<strong>данные без меток</strong>, то есть обыкновенные тексты, никем
-					специально не размеченные. Модель просто учится предсказывать
-					следующий токен, для этого ей не требуются человеческие метки. Такой
-					подход называется {" "}
-					<strong>self-supervised learning (самообучение).</strong>
-				</p>
-				<div className="sc-mt-3 sc-gap-2 flex">
+				<div className="sc-gap-2 flex">
 					<div className="sc-p-3 sc-gap-3 sc-text-4 flex w-2/5 flex-col border">
 						<p>
 							Сегодня для нас совершенно ясно: чем больше данных видела языковая

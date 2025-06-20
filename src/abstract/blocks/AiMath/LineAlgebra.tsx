@@ -236,7 +236,6 @@ const LineAlgebra = () => {
 				</div>
 				<div className="sc-gap-5 flex flex-col items-center">
 					<ImageContainer
-						fit="cover"
 						src={"/images/image-2.png"}
 						className="sc-w-[524px] sc-h-[242px] relative"
 					/>

@@ -27,7 +27,7 @@ const Transformers = () => {
 					</p>
 					<p>
 						Трансформеры изменили подход ко всем задачам обработки текста
-						и открыли путь к созданию современных больших языковых моделей.
+						и открыли путь к созданию современных больших языковых моделей.{" "}
 						<strong>
 							Большинство известных вам нейросетей сегодня построены именно
 							на основе трансформеров.
@@ -85,12 +85,12 @@ const Transformers = () => {
 						</li>
 					</div>
 					<div className="sc-pl-8 sc-pr-3 sc-py-3">
-						<li>Внимание считается также, как мы разбирали в прошлой главе</li>
+						<li>Внимание считается также, как мы разбирали в прошлой главе.</li>
 					</div>
 					<div className="sc-pl-8 sc-pr-3 sc-py-3">
 						<li>
 							Полученные веса внимания суммируются, и итоговое представление
-							отправляется в декодер для генерации токена
+							отправляется в декодер для генерации токена.
 						</li>
 					</div>
 				</ol>
@@ -398,7 +398,7 @@ const Transformers = () => {
 			</div>
 			<div className="flex flex-col items-center">
 				<div className="sc-gap-[45px] flex">
-					<div className="sc-w-[285px] sc-top-8 relative">
+					<div className="sc-w-[285px] sc-top-7 relative">
 						<InfoBox arrowPosition="bottom" arrowOffset="160px">
 							<p className="sc-p-4">
 								В этой части все остается как есть, обычный трансформер.
@@ -406,7 +406,7 @@ const Transformers = () => {
 							</p>
 						</InfoBox>
 					</div>
-					<div className="sc-w-[285px] sc-top-8 relative">
+					<div className="sc-w-[285px] sc-top-7 relative">
 						<InfoBox arrowPosition="bottom" arrowOffset="160px">
 							<p className="sc-p-4">
 								В этой части все остается как есть, обычный трансформер.

@@ -327,8 +327,7 @@ const Learning = () => {
 							</div>
 							<div className="sc-pl-8 sc-pr-3 sc-py-3">
 								<li>
-									Среда принимает от актора действия, а обратно возвращает
-									награду rt+1 и следующее состояние st+1
+									Функция потерь для обновления параметров модели-критика.
 								</li>
 							</div>
 						</ol>
@@ -420,7 +419,7 @@ const Learning = () => {
 					className="sc-w-full sc-h-[413px] relative"
 				/>
 			</div>
-			<ol className="flex w-9/10 list-decimal flex-col font-medium" start={4}>
+			<ol className="flex w-9/10 list-decimal flex-col font-medium marker:font-semibold marker:text-[#151515]">
 				<div className="sc-pl-8 sc-pr-3 sc-py-3">
 					<li>Модель генерирует уже не один ответ, а сразу несколько.</li>
 				</div>
@@ -471,7 +470,7 @@ const Learning = () => {
 					className="sc-w-full sc-h-[356px] relative"
 				/>
 			</div>
-			<ol className="flex w-9/10 list-decimal flex-col font-medium" start={4}>
+			<ol className="flex w-9/10 list-decimal flex-col font-medium marker:font-semibold marker:text-[#151515]">
 				<div className="sc-pl-8 sc-pr-3 sc-py-3">
 					<li>
 						То есть, в отличие от классических подходов к RLHF, в DPO мы
