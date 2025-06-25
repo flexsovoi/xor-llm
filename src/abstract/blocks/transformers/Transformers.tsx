@@ -61,13 +61,13 @@ const Transformers = () => {
 				<ol className="flex w-9/10 list-decimal flex-col font-medium">
 					<div className="sc-px-8 sc-py-3">
 						<li>
-							Это наша входная последовательность, которую обрабатывает энкодер
+							Это наша входная последовательность, которую обрабатывает энкодер.
 						</li>
 					</div>
 					<div className="sc-px-8 sc-py-3">
 						<li>
 							Здесь <strong>последовательно</strong> формируются скрытые
-							состояния
+							состояния.
 						</li>
 					</div>
 					<div className="sc-pl-8 sc-pr-3 sc-py-3">
@@ -176,7 +176,8 @@ const Transformers = () => {
 				<div className="sc-pl-8 sc-pr-3 sc-py-3">
 					<li>
 						shifted right означает, что для каждого токена входной
-						последовательности мы предсказываем следующий, не подглядывая вперёд
+						последовательности мы предсказываем следующий, не подглядывая
+						вперёд.
 					</li>
 				</div>
 			</ol>
@@ -203,7 +204,8 @@ const Transformers = () => {
 					<p>
 						На схеме выше вы можете иногда видеть стрелки, которые соединяют
 						вход блока напрямую с его выходом, минуя промежуточные слои. Это так
-						называемые Residual Connections (остаточные соединения).
+						называемые 
+						<strong>Residual Connections (остаточные соединения).</strong>
 					</p>
 					<p>
 						Дело в том, что при обучении глубоких сетей информация часто
@@ -398,7 +400,7 @@ const Transformers = () => {
 			</div>
 			<div className="flex flex-col items-center">
 				<div className="sc-gap-[45px] flex">
-					<div className="sc-w-[285px] sc-top-7 relative">
+					<div className="sc-w-[285px] sc-top-6 relative">
 						<InfoBox arrowPosition="bottom" arrowOffset="160px">
 							<p className="sc-p-4">
 								В этой части все остается как есть, обычный трансформер.
@@ -406,7 +408,7 @@ const Transformers = () => {
 							</p>
 						</InfoBox>
 					</div>
-					<div className="sc-w-[285px] sc-top-7 relative">
+					<div className="sc-w-[285px] sc-top-6 relative">
 						<InfoBox arrowPosition="bottom" arrowOffset="160px">
 							<p className="sc-p-4">
 								В этой части все остается как есть, обычный трансформер.
@@ -475,7 +477,7 @@ const Transformers = () => {
 						<p>
 							Сама архитектура здесь не меняется. Просто добавляются другие
 							модальности (картинки, видео, аудио), которые нужно обрабатывать
-							отдельно
+							отдельно.
 						</p>
 					</div>
 					<p>
@@ -488,7 +490,7 @@ const Transformers = () => {
 			<div>
 				<ol className="flex list-decimal flex-wrap font-medium">
 					<div className="sc-pl-8 sc-pr-3 sc-py-3 sc-w-[363px]">
-						<li>Склеиваем и подаём в LLM</li>
+						<li>Склеиваем и подаём в LLM.</li>
 					</div>
 					<div className="sc-pl-8 sc-pr-3 sc-py-3 sc-w-[411px]">
 						<li>

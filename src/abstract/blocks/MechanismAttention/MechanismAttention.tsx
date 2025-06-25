@@ -373,17 +373,17 @@ const MechanismAttention = () => {
 					<InfoBox arrowPosition="right" arrowOffset="48px">
 						<p className="sc-p-4">
 							Для «коти» мы считаем вектор запроса, а для остальных токенов
-							векторы ключей и значений
+							векторы ключей и значений.
 						</p>
 					</InfoBox>
 
 					<InfoBox arrowPosition="right" arrowOffset="19px">
-						<p className="sc-p-4 sc-w-[600px]">Это эмбеддинги</p>
+						<p className="sc-p-4 sc-w-[600px]">Это эмбеддинги.</p>
 					</InfoBox>
 
 					<InfoBox arrowPosition="right" arrowOffset="22px">
 						<p className="sc-p-4 sc-w-[600px]">
-							Предположим, сейчас мы обрабатываем токен «котю»
+							Предположим, сейчас мы обрабатываем токен «котю».
 						</p>
 					</InfoBox>
 				</div>

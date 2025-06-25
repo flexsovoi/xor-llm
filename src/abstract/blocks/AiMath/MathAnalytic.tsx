@@ -332,7 +332,7 @@ const MathAnalytic = () => {
 						Лосс-функция (кросс-энтропия)
 					</p>
 				</div>
-				<div className="sc-text-4 flex flex-col text-center text-[#151515]">
+				<div className="sc-text-4 sc-gap-2 flex flex-col text-center text-[#151515]">
 					<p className="font-semibold">Все готово для обучения нейросети?</p>
 					<p className="sc-p-3 bg-myblue border">На самом деле еще не совсем</p>
 				</div>

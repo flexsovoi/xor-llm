@@ -211,7 +211,7 @@ const LineAlgebra = () => {
 						произведение!
 					</p>
 					<div className="sc-w-[268px] sc-h-[72px] self-end">
-						<InfoBox arrowPosition="right" arrowOffset="31px">
+						<InfoBox arrowPosition="right" arrowOffset="31px" isBorder={false}>
 							<p className="sc-p-4 sc-text-4 bg-myblue rounded-md border font-semibold">
 								На вход поступают несколько значений (числа)
 							</p>

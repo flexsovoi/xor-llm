@@ -23,18 +23,18 @@ const Year1957 = () => {
 						Вот как перцептрон выглядел:
 					</p>
 					<div className="relative">
-						<div className="sc-w-[480px] sc-h-[215px] sc-top-[50px] -sc-left-[50px] absolute">
+						<div className="sc-w-[480px] sc-h-[215px] sc-top-[50px] -sc-left-[45px] absolute">
 							<ImageContainer src="/images/image-2.png" />
-							<div className="sc-right-[460px] sc-top-[45px] sc-w-[230px] absolute">
+							<div className="sc-right-[476px] sc-top-[45px] sc-w-[230px] absolute">
 								<InfoBox arrowOffset="55px">
 									<p className="font-onest sc-text-5 sc-p-[16px] text-[#707070]">
 										На вход поступают несколько значений (числа)
 									</p>
 								</InfoBox>
 							</div>
-							<div className="sc-left-[455px] sc-top-[40px] absolute">
+							<div className="sc-left-[470px] sc-top-[40px] sc-w-[275px] absolute">
 								<InfoBox arrowOffset="55px" arrowPosition="left">
-									<p className="font-onest sc-text-5 sc-p-[16px] sc-w-[290px] text-[#707070]">
+									<p className="font-onest sc-text-5 sc-p-[16px] text-[#707070]">
 										Чтобы добавить нелинейности, сумма проходит через простую{" "}
 										<span className="font-bold text-black">
 											активационную функцию:
@@ -44,7 +44,7 @@ const Year1957 = () => {
 									</p>
 								</InfoBox>
 							</div>
-							<div className="sc-top-[185px] sc-left-[90px] sc-w-[310px] absolute">
+							<div className="sc-top-[185px] sc-left-[99px] sc-w-[310px] absolute">
 								<InfoBox arrowOffset="150px" arrowPosition="top">
 									<p className="font-onest sc-text-5 sc-p-[16px] text-[#707070]">
 										Каждое значение умножается на свой вес w

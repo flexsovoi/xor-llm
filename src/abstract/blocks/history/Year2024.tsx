@@ -62,7 +62,7 @@ const Year2024 = () => {
 				</div>
 				<div className="sc-gap-3 sc-w-[772px] relative right-[60px] flex justify-between">
 					<div className="sc-w-[388px]">
-						<InfoBox arrowPosition="top" arrowOffset="280px">
+						<InfoBox arrowPosition="top" arrowOffset="280px" isBorder={false}>
 							<div className="bg-myblue 4 sc-p-4 sc-gap-3 sc-text-4 flex flex-col rounded-lg border">
 								<p className="font-medium text-[#151515]">
 									Вот об этом мы знали давно. Но бесконечно масштабировать сети
@@ -79,7 +79,7 @@ const Year2024 = () => {
 						</InfoBox>
 					</div>
 					<div className="sc-w-[372px]">
-						<InfoBox arrowPosition="top" arrowOffset="181px">
+						<InfoBox arrowPosition="top" arrowOffset="181px" isBorder={false}>
 							<div className="bg-myblue sc-p-4 sc-gap-3 sc-text-4 flex flex-col rounded-lg border">
 								<p className="font-medium text-[#151515]">
 									Вот эту идею доказала как раз модель o1, выпущенная OpenAI:

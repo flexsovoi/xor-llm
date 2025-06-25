@@ -49,7 +49,7 @@ const Year1997 = () => {
 						className="sc-w-[205px] sc-h-[191px] -rotate-2"
 					/>
 					<div className="sc-w-[270px] sc-right-2 relative">
-						<InfoBox arrowPosition="left" arrowOffset="75px">
+						<InfoBox arrowPosition="left" arrowOffset="75px" isBorder={false}>
 							<div className="sc-p-4 flex h-fit flex-col rounded-[8px] border bg-[#5DFBFB]">
 								<p className="font-onest sc-text-4 font-medium">
 									В LSTM все намного сложнее: предусмотрены механизмы забывания,
